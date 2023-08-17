@@ -6,14 +6,21 @@ import { ProductsComponent } from './products/products.component';
 import { AdminComponent } from './admin.component';
 import { RouterModule, Routes } from '@angular/router';
 import { ProductsModule } from './products/products.module';
+import { CustomerModule } from './customer/customer.module';
+import { OrdersComponent } from './orders/orders.component';
+import { QuotesComponent } from './quotes/quotes.component';
+import { NewsComponent } from './news/news.component';
 @NgModule({
   declarations: [
     DashboardComponent,
     NavbarComponent,
-    AdminComponent
+    AdminComponent,
+    OrdersComponent,
+    QuotesComponent,
+    NewsComponent
   ],
   imports: [
-    CommonModule,RouterModule,ProductsModule
+    CommonModule,RouterModule,ProductsModule,CustomerModule
   ]
 })
 export class AdminModule { }
