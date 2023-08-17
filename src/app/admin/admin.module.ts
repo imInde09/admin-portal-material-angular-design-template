@@ -5,22 +5,15 @@ import { NavbarComponent } from './layout/navbar/navbar.component';
 import { ProductsComponent } from './products/products.component';
 import { AdminComponent } from './admin.component';
 import { RouterModule, Routes } from '@angular/router';
-import { CategoryComponent } from './category/category.component';
-import { ApplicationsComponent } from './applications/applications.component';
-import { PricingImportComponent } from './pricing-import/pricing-import.component';
-
+import { ProductsModule } from './products/products.module';
 @NgModule({
   declarations: [
     DashboardComponent,
     NavbarComponent,
-    ProductsComponent,
-    AdminComponent,
-    CategoryComponent,
-    ApplicationsComponent,
-    PricingImportComponent,
+    AdminComponent
   ],
   imports: [
-    CommonModule,RouterModule
+    CommonModule,RouterModule,ProductsModule
   ]
 })
 export class AdminModule { }
