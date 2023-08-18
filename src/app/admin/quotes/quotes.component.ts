@@ -24,8 +24,8 @@ export class QuotesComponent implements AfterViewInit  {
     this.dataSource.paginator = this.paginator;
     this.dataSource.sort = this.sort;
   }
-  onedit(){
-    console.log("edit");
+  onedit(item:any){
+    console.log(item.id+item.name+item.date+item.progress+item.item);
   }
   ondelete(){
     console.log("delete");
@@ -45,7 +45,7 @@ export interface UserData {
   name: string;
   date: string;
   progress: string;
-  fruit: string;
+  item: string;
 }
 
 /** Constants used to fill up our data base. */
@@ -89,6 +89,6 @@ function createNewUser(id: number): UserData {
     name: name,
     date: Date.now().toString(),
     progress: Math.round(Math.random() * 100).toString(),
-    fruit: ITEMS[Math.round(Math.random() * (ITEMS.length - 1))],
+    item: ITEMS[Math.round(Math.random() * (ITEMS.length - 1))],
   };
 }
