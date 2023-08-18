@@ -9,13 +9,13 @@ import {MatTableDataSource, MatTableModule} from '@angular/material/table';
 })
 
 export class QuotesComponent implements AfterViewInit  {
-  displayedColumns: string[] = ['id', 'name', 'progress', 'fruit','actions'];
+  displayedColumns: string[] = ['id', 'name', 'items','date','actions'];
   dataSource: MatTableDataSource<UserData>;
   @ViewChild(MatPaginator) paginator!: MatPaginator;
   @ViewChild(MatSort) sort!: MatSort;
   constructor() {
     // Create 100 users
-    const users = Array.from({length: 100}, (_, k) => createNewUser(k + 1));
+    const users = Array.from({length: 30}, (_, k) => createNewUser(k + 1));
 
     // Assign the data to the data source for the table to render
     this.dataSource = new MatTableDataSource(users);
@@ -43,20 +43,17 @@ export class QuotesComponent implements AfterViewInit  {
 export interface UserData {
   id: string;
   name: string;
+  date: string;
   progress: string;
   fruit: string;
 }
 
 /** Constants used to fill up our data base. */
-const FRUITS: string[] = [
-  'blueberry',
-  'lychee',
-  'kiwi',
-  'mango',
-  'peach',
-  'lime',
-  'pomegranate',
-  'pineapple',
+const ITEMS: string[] = [
+  'Matica P402i Desktop Inkjet Passport Printer',
+  'C330 Automatic Metal Tag Embosser',
+  'Avalo Series Tech-Ready Medication Carts M-Series Tech-Ready Medication Carts',
+  'C330 Automatic Metal Tag Embosser'
 ];
 const NAMES: string[] = [
   'Maia',
@@ -90,7 +87,8 @@ function createNewUser(id: number): UserData {
   return {
     id: id.toString(),
     name: name,
+    date: Date.now().toString(),
     progress: Math.round(Math.random() * 100).toString(),
-    fruit: FRUITS[Math.round(Math.random() * (FRUITS.length - 1))],
+    fruit: ITEMS[Math.round(Math.random() * (ITEMS.length - 1))],
   };
 }
