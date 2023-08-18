@@ -22,6 +22,7 @@ import {MatTableModule} from '@angular/material/table';
 import {MatPaginator, MatPaginatorModule} from '@angular/material/paginator';
 import { MatFormField } from '@angular/material/form-field';
 import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatSort, MatSortModule} from '@angular/material/sort';
 @NgModule({
   declarations: [
     DashboardComponent,
@@ -34,7 +35,7 @@ import {MatFormFieldModule} from '@angular/material/form-field';
   imports: [
     CommonModule,RouterModule,ProductsModule,CustomerModule,
     MatIconModule,MatButtonModule,MatToolbarModule,MatSidenavModule,NgIf,MatListModule,MatExpansionModule,
-    MatTableModule,MatPaginatorModule,MatFormFieldModule
+    MatTableModule,MatPaginatorModule,MatFormFieldModule,MatSortModule
   ]
 })
 export class AdminModule { }
