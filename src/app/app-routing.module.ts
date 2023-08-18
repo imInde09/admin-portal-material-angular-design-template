@@ -17,7 +17,7 @@ import { OrdersComponent } from './admin/orders/orders.component';
 import { QuotesComponent } from './admin/quotes/quotes.component';
 import { NewsComponent } from './admin/news/news.component';
 const routes: Routes = [
-  { path: '', redirectTo: '/admin/dashboard', pathMatch: 'full' },
+  { path: '', redirectTo: '/signin', pathMatch: 'full' },
   { path: 'signin', component: SigninComponent },
   {
     path: 'admin', component: AdminComponent, children: [

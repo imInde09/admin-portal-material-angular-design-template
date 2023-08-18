@@ -5,6 +5,7 @@ import { Component } from '@angular/core';
   templateUrl: './quotes.component.html',
   styleUrls: ['./quotes.component.css']
 })
+
 export class QuotesComponent {
 
 }
