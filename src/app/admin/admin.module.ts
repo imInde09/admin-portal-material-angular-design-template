@@ -19,6 +19,9 @@ import {MatListModule, MatListItem, MatListItemLine} from '@angular/material/lis
 import {MatList} from '@angular/material/list';
 import {MatExpansionModule} from '@angular/material/expansion';
 import {MatTableModule} from '@angular/material/table';
+import {MatPaginator, MatPaginatorModule} from '@angular/material/paginator';
+import { MatFormField } from '@angular/material/form-field';
+import {MatFormFieldModule} from '@angular/material/form-field';
 @NgModule({
   declarations: [
     DashboardComponent,
@@ -26,12 +29,12 @@ import {MatTableModule} from '@angular/material/table';
     AdminComponent,
     OrdersComponent,
     QuotesComponent,
-    NewsComponent,
+    NewsComponent
   ],
   imports: [
     CommonModule,RouterModule,ProductsModule,CustomerModule,
     MatIconModule,MatButtonModule,MatToolbarModule,MatSidenavModule,NgIf,MatListModule,MatExpansionModule,
-    MatTableModule
+    MatTableModule,MatPaginatorModule,MatFormFieldModule
   ]
 })
 export class AdminModule { }
