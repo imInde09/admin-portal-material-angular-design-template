@@ -1,14 +1,36 @@
 <mat-toolbar color="grey">
-  <a class="navbar-brand mx-3" href="#"><img class="img-fluid" width="140" src="assets/clip-path-group@2x.png" alt=""></a>
+  <a class="navbar-brand mx-3" routerLink="dashboard"><img class="img-fluid" width="140" src="assets/clip-path-group@2x.png" alt=""></a>
   <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon"
     (click)="drawer.toggle()">
     <mat-icon>menu</mat-icon>
   </button>
 
   <span class="example-spacer"></span>
-  <button mat-icon-button class="example-icon perm_identity" aria-label="Example icon-button with heart icon">
+  <!-- <button mat-icon-button class="example-icon perm_identity" aria-label="Example icon-button with heart icon">
     <mat-icon>perm_identity</mat-icon>
+  </button> -->
+  <button mat-fab extended color="none" style="box-shadow: none;" [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
+    <mat-icon>perm_identity</mat-icon>
+    Admin
   </button>
+  <!-- <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
+    <mat-icon>perm_identity</mat-icon>
+  </button> -->
+  <mat-menu #menu="matMenu">
+    <button mat-menu-item routerLink="products/lists">
+      <mat-icon>person</mat-icon>
+      <span>Profile</span>
+    </button>
+    <button mat-menu-item>
+      <mat-icon>password</mat-icon>
+      <span>Change Passoword</span>
+    </button>
+    <button mat-menu-item style="color: red;">
+      <mat-icon color="warn">logout</mat-icon>
+      <span>Logout</span>
+    </button>
+  </mat-menu>
+  
 </mat-toolbar>
 <mat-sidenav-container class="example-container" autosize [hasBackdrop]="false">
   <mat-sidenav #drawer class="example-sidenav" mode="push" style="width: 230px ;">

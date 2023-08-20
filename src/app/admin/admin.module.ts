@@ -23,6 +23,7 @@ import {MatPaginator, MatPaginatorModule} from '@angular/material/paginator';
 import { MatFormField } from '@angular/material/form-field';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatSort, MatSortModule} from '@angular/material/sort';
+import {MatMenuModule} from '@angular/material/menu';
 @NgModule({
   declarations: [
     DashboardComponent,
@@ -35,7 +36,7 @@ import {MatSort, MatSortModule} from '@angular/material/sort';
   imports: [
     CommonModule,RouterModule,ProductsModule,CustomerModule,
     MatIconModule,MatButtonModule,MatToolbarModule,MatSidenavModule,NgIf,MatListModule,MatExpansionModule,
-    MatTableModule,MatPaginatorModule,MatFormFieldModule,MatSortModule
+    MatTableModule,MatPaginatorModule,MatFormFieldModule,MatSortModule,MatMenuModule
   ]
 })
 export class AdminModule { }
