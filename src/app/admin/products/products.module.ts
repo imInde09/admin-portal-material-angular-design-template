@@ -20,9 +20,10 @@ import { MatFormField } from '@angular/material/form-field';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatSort, MatSortModule} from '@angular/material/sort';
 import {MatMenuModule} from '@angular/material/menu';
+import { AddCategoryComponent } from './category/add-category/add-category.component';
 @NgModule({
   declarations: [
-    ListComponent,ProductsComponent, CategoryComponent, ApplicationsComponent, PricingImportComponent
+    ListComponent,ProductsComponent, CategoryComponent, ApplicationsComponent, PricingImportComponent, AddCategoryComponent
   ],
   imports: [
     CommonModule,RouterModule,MatIconModule,MatButtonModule,MatToolbarModule,MatSidenavModule,NgIf,MatListModule,MatExpansionModule,

@@ -1,0 +1,100 @@
+<div class="container-fluid pt-3 card" style="border: none;">
+    <div class="row d-flex justify-content-between mb-2 px-3">
+        <div class="col-md-2">
+            <h4>Category</h4>
+        </div>
+        <div class="col-md-2 d-flex justify-content-end align-items-center">
+            <a class="btn btn-primary btn-sm" style="margin-right: 15px;" (click)="goCategory()">View All Category</a>
+        </div>
+
+    </div>
+    <div class="card-body">
+        <form action="">
+
+            <div class="row">
+                <div class="col-md-12">
+                    <p style="font-size: 16px; font-weight: 500;">Add Category</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-5">
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" class="form-control" id="name" placeholder="Enter Name">
+                    </div>
+                </div>
+                <div class="col-md-5">
+                    <div class="form-group">
+                        <label for="slug">Slug</label>
+                        <input type="text" class="form-control" id="slug" placeholder="Example Slug">
+                    </div>
+                </div>
+                <div class="col-md-2">
+                    <div class="form-group">
+                        <label for="order">Order</label>
+                        <input type="text" class="form-control" id="order" placeholder="Example Order">
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label for="patentCategory">Parent Category</label>
+                        <select class="form-control" id="patentCategory">
+                          <option>1</option>
+                          <option>2</option>
+                          <option>3</option>
+                          <option>4</option>
+                          <option>5</option>
+                        </select>
+                      </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label for="status">Status</label>
+                        <select class="form-control" id="status">
+                          <option selected>active</option>
+                          <option>inactive</option>
+                        </select>
+                      </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label for="industry">Industry/Applications</label>
+                        <select class="form-control" id="industry">
+                          <option selected>active</option>
+                          <option>inactive</option>
+                        </select>
+                      </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="form-group">
+                        <label for="shortDescription">Short Description</label>
+                        <input type="text" class="form-control" id="shortDescription" placeholder="Example input">
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="formFile" class="form-label">Image</label>
+                        <input class="form-control" type="file" id="image">
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="formFile" class="form-label">Banner Image</label>
+                        <input class="form-control" type="file" id="bannerImage">
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-2">
+                    <button class="btn btn-primary">Submit</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>

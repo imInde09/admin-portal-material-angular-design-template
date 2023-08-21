@@ -2,6 +2,7 @@ import {AfterViewInit, Component, ViewChild} from '@angular/core';
 import {MatPaginator, MatPaginatorModule} from '@angular/material/paginator';
 import { MatSort } from '@angular/material/sort';
 import {MatTableDataSource, MatTableModule} from '@angular/material/table';
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-category',
   templateUrl: './category.component.html',
@@ -12,7 +13,7 @@ export class CategoryComponent implements AfterViewInit {
   dataSource: MatTableDataSource<UserData>;
   @ViewChild(MatPaginator) paginator!: MatPaginator;
   @ViewChild(MatSort) sort!: MatSort;
-  constructor() {
+  constructor( private router: Router) {
     // Create 100 users
     const users = Array.from({length: 30}, (_, k) => createNewUser(k + 1));
 
@@ -36,6 +37,10 @@ export class CategoryComponent implements AfterViewInit {
     if (this.dataSource.paginator) {
       this.dataSource.paginator.firstPage();
     }
+  }
+  add_category(){
+    console.log("add category");
+    this.router.navigate(['/admin/products/category/add-category']);
   }
 }
 
