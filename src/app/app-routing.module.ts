@@ -1,3 +1,4 @@
+import { AddProductComponent } from './admin/products/list/add-product/add-product.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { SigninComponent } from './login/signin/signin.component';
@@ -17,6 +18,7 @@ import { OrdersComponent } from './admin/orders/orders.component';
 import { QuotesComponent } from './admin/quotes/quotes.component';
 import { NewsComponent } from './admin/news/news.component';
 import { AddCategoryComponent } from './admin/products/category/add-category/add-category.component';
+import { AddNewsComponent } from './admin/news/add-news/add-news.component';
 const routes: Routes = [
   { path: '', redirectTo: '/signin', pathMatch: 'full' },
   { path: 'signin', component: SigninComponent },
@@ -30,6 +32,7 @@ const routes: Routes = [
           { path: 'pricing-import', component: PricingImportComponent },
           { path: 'lists', component: ListComponent },
           {path: 'category/add-category', component: AddCategoryComponent},
+          {path: 'lists/add-products',component: AddProductComponent},
           { path: '', redirectTo: '/admin/products/lists', pathMatch: 'full' }
         ]
       },
@@ -45,6 +48,7 @@ const routes: Routes = [
       {path:'orders',component: OrdersComponent},
       {path:'quotes',component: QuotesComponent},
       {path:'news',component: NewsComponent},
+      {path: 'news/add-news', component: AddNewsComponent},
       { path: '', redirectTo: '/admin/dashboard', pathMatch: 'full' }
     ]
   }
