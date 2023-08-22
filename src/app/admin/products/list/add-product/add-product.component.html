@@ -8,60 +8,166 @@
         </div>
     </div>
     <div class="row">
-        <div class="col-md-12">
-            <mat-tab-group mat-stretch-tabs="false" mat-align-tabs="start">
-                <mat-tab label="General">
-                    <div class="p-3">
-                        <div class="row mb-2">
-                            <div class="col-md-6">
-                                <div class="form-group">
-                                    <label for="name" class="mb-1 text-muted" style="font-weight: 500;">Name</label>
-                                    <input type="text" class="form-control" id="name" placeholder="Enter Name">
+        <form action="">
+            <div class="col-md-12">
+                <mat-tab-group mat-stretch-tabs="false" mat-align-tabs="start">
+                    <mat-tab label="General">
+                        <div class="p-3">
+                            <div class="row mb-2">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="name" class="mb-1 text-muted" style="font-weight: 500;">Name</label>
+                                        <input type="text" class="form-control" id="name" placeholder="Enter Name">
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="slug" class="mb-1 text-muted" style="font-weight: 500;">Slug</label>
+                                        <input type="text" class="form-control" id="slug" placeholder="Example Slug">
+                                    </div>
                                 </div>
                             </div>
-                            <div class="col-md-6">
-                                <div class="form-group">
-                                    <label for="slug" class="mb-1 text-muted" style="font-weight: 500;">Slug</label>
-                                    <input type="text" class="form-control" id="slug" placeholder="Example Slug">
+                            <div class="row mb-2">
+                                <div class="col-md-3">
+                                    <div class="form-group">
+                                        <label for="price" class="mb-1 text-muted" style="font-weight: 500;">Price</label>
+                                        <input type="text" class="form-control" id="price" placeholder="Enter Price">
+                                    </div>
+                                </div>
+                                <div class="col-md-3">
+                                    <div class="form-group">
+                                        <label for="DiscPrice" class="mb-1 text-muted" style="font-weight: 500;">Discounted Price</label>
+                                        <input type="text" class="form-control" id="DiscPrice" placeholder="Example Discounted Price">
+                                    </div>
+                                </div>
+                                <div class="col-md-3">
+                                    <div class="form-group">
+                                        <label for="productsku" class="mb-1 text-muted" style="font-weight: 500;">Product Sku</label>
+                                        <input type="text" class="form-control" id="productsku" placeholder="Enter Product Sku">
+                                    </div>
+                                </div>
+                                <div class="col-md-3">
+                                    <div class="form-group">
+                                        <label for="vendor" class="mb-1 text-muted" style="font-weight: 500;">Vendor</label>
+                                        <select class="form-control" id="vendor">
+                                            <option>1</option>
+                                            <option>2</option>
+                                            <option>3</option>
+                                            <option>4</option>
+                                            <option>5</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row mb-2">
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                        <label for="patentCategory" class="mb-1 text-muted" style="font-weight: 500;">Category</label>
+                                        <select class="form-control" id="patentCategory">
+                                            <option>1</option>
+                                            <option>2</option>
+                                            <option>3</option>
+                                            <option>4</option>
+                                            <option>5</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-md-3">
+                                    <div class="form-group">
+                                        <label for="status" class="mb-1 text-muted" style="font-weight: 500;">Status</label>
+                                        <select class="form-control" id="status">
+                                            <option selected>active</option>
+                                            <option>inactive</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-md-3" style="    display: flex;
+                                flex-direction: column;
+                                justify-content: center;">
+                                    <span class="mb-1 text-muted" style="font-weight: 500;">Include Top Parts</span>
+                                    <div class="form-group form-check form-switch d-flex align-items-center">
+                                        
+                                        <input class="form-check-input" style="margin-right: 5px;" type="checkbox" role="switch" id="flexSwitchCheckDefault">
+                                        <label class="form-check-label" for="flexSwitchCheckDefault">Do you want to display in top list?</label>
+                                      </div>
+                                </div>
+                                <div class="col-md-2">
+                                    <div class="form-group">
+                                        <label for="topProductOrder" class="mb-1 text-muted" style="font-weight: 500;">Top Product Order</label>
+                                        <input type="text" class="form-control" id="topProductOrder" placeholder="Enter Top Product Order">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row mb-2">
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <label for="Description" class="label-style text-muted mb-1" style="font-weight: 500;">Description</label>
+                                        <quill-editor id="Description" style="display: block;"
+                                            [styles]="{ 'width': '100%', 'height': '150px' }"></quill-editor>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="row mb-2">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        
+                                        <label for="formFile" class="form-label mb-1 text-muted" style="font-weight: 500;">Image</label>
+                                        <input class="form-control" type="file" id="image">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row mb-2">
+                                <div class="col-md-2">
+                                    <button class="btn btn-primary">Submit</button>
                                 </div>
                             </div>
                         </div>
-                        <div class="row mb-2">
-                            <div class="col-md-3">
-                                <div class="form-group">
-                                    <label for="price" class="mb-1 text-muted" style="font-weight: 500;">Price</label>
-                                    <input type="text" class="form-control" id="price" placeholder="Enter Price">
+    
+                    </mat-tab>
+                    <mat-tab label="Options/ Variations">
+                        <div class="p-3">
+                            
+                            <div *ngFor="let option of options; let i = index" class="row mb-2">
+                                <div class="col-md-3">
+                                    <label for="productsku" class="mb-1 text-muted" style="font-weight: 500;">Option Name</label>
+                                    <input type="text" class="form-control" id="productsku" [(ngModel)]="option.name" placeholder="Option {{ i + 1 }}">
+                                </div>
+                                <div class="col-md-3">
+                                    <label for="productsku" class="mb-1 text-muted" style="font-weight: 500;">Option Price</label>
+                                    <input type="text" class="form-control" id="productsku" [(ngModel)]="option.price" placeholder="Option {{ i + 1 }}">
+                                </div>
+                                <div class="col-md-3">
+                                    <label for="productsku" class="mb-1 text-muted" style="font-weight: 500;">Option Discount Price</label>
+                                    <input type="text" class="form-control" id="productsku" [(ngModel)]="option.discountedPrice" placeholder="Option {{ i + 1 }}">
+                                </div>
+                                <div class="col-md-3 d-flex align-items-end">
+                                    <button class="btn btn-primary" (click)="removeRow(i)">Remove</button>
                                 </div>
                             </div>
-                            <div class="col-md-3">
-                                <div class="form-group">
-                                    <label for="DiscPrice" class="mb-1 text-muted" style="font-weight: 500;">Discounted Price</label>
-                                    <input type="text" class="form-control" id="DiscPrice" placeholder="Example Discounted Price">
-                                </div>
-                            </div>
-                            <div class="col-md-3">
-                                <div class="form-group">
-                                    <label for="productsku" class="mb-1 text-muted" style="font-weight: 500;">Product Sku</label>
-                                    <input type="text" class="form-control" id="productsku" placeholder="Enter Product Sku">
-                                </div>
-                            </div>
-                            <div class="col-md-3">
-                                <div class="form-group">
-                                    <label for="vendor" class="mb-1 text-muted" style="font-weight: 500;">Vendor</label>
-                                    <select class="form-control" id="vendor">
-                                        <option>1</option>
-                                        <option>2</option>
-                                        <option>3</option>
-                                        <option>4</option>
-                                        <option>5</option>
-                                    </select>
+                            <button class="btn btn-primary" (click)="addRow()">Add Option</button>
+                          </div>
+                          
+                    </mat-tab>
+                    <mat-tab label="Long Description">
+                        <div class="p-3">
+                            <div class="row mb-2">
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <label for="Description" class="label-style text-muted" style="font-weight: 500;">Description</label>
+                                        <quill-editor id="Description" style="display: block;"
+                                            [styles]="{ 'width': '100%', 'height': '150px' }"></quill-editor>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="row mb-2">
-                            <div class="col-md-4">
+    
+                    </mat-tab>
+                    <mat-tab label="Related Products">
+                        <div class="p-3">
+                            <div class="col-md-12">
                                 <div class="form-group">
-                                    <label for="patentCategory" class="mb-1 text-muted" style="font-weight: 500;">Category</label>
+                                    <label for="patentCategory " class="mb-1 text-muted" style="font-weight: 500;">Related Products</label>
                                     <select class="form-control" id="patentCategory">
                                         <option>1</option>
                                         <option>2</option>
@@ -71,131 +177,27 @@
                                     </select>
                                 </div>
                             </div>
-                            <div class="col-md-3">
+                        </div>
+    
+                    </mat-tab>
+                    <mat-tab label="Industry/ Applications">
+                        <div class="p-3">
+                            <div class="col-md-12">
                                 <div class="form-group">
-                                    <label for="status" class="mb-1 text-muted" style="font-weight: 500;">Status</label>
-                                    <select class="form-control" id="status">
-                                        <option selected>active</option>
-                                        <option>inactive</option>
+                                    <label for="patentCategory " class="mb-1 text-muted" style="font-weight: 500;">Industry/ Applications</label>
+                                    <select class="form-control" id="patentCategory">
+                                        <option>1</option>
+                                        <option>2</option>
+                                        <option>3</option>
+                                        <option>4</option>
+                                        <option>5</option>
                                     </select>
                                 </div>
                             </div>
-                            <div class="col-md-3" style="    display: flex;
-                            flex-direction: column;
-                            justify-content: center;">
-                                <span class="mb-1 text-muted" style="font-weight: 500;">Include Top Parts</span>
-                                <div class="form-group form-check form-switch d-flex align-items-center">
-                                    
-                                    <input class="form-check-input" style="margin-right: 5px;" type="checkbox" role="switch" id="flexSwitchCheckDefault">
-                                    <label class="form-check-label" for="flexSwitchCheckDefault">Do you want to display in top list?</label>
-                                  </div>
-                            </div>
-                            <div class="col-md-2">
-                                <div class="form-group">
-                                    <label for="topProductOrder" class="mb-1 text-muted" style="font-weight: 500;">Top Product Order</label>
-                                    <input type="text" class="form-control" id="topProductOrder" placeholder="Enter Top Product Order">
-                                </div>
-                            </div>
                         </div>
-                        <div class="row mb-2">
-                            <div class="col-md-12">
-                                <div class="form-group">
-                                    <label for="Description" class="label-style text-muted mb-1" style="font-weight: 500;">Description</label>
-                                    <quill-editor id="Description" style="display: block;"
-                                        [styles]="{ 'width': '100%', 'height': '150px' }"></quill-editor>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div class="row mb-2">
-                            <div class="col-md-6">
-                                <div class="form-group">
-                                    
-                                    <label for="formFile" class="form-label mb-1 text-muted" style="font-weight: 500;">Image</label>
-                                    <input class="form-control" type="file" id="image">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row mb-2">
-                            <div class="col-md-2">
-                                <button class="btn btn-primary">Submit</button>
-                            </div>
-                        </div>
-                    </div>
-
-                </mat-tab>
-                <mat-tab label="Options/ Variations">
-                    <div class="p-3">
-                        
-                        <div *ngFor="let option of options; let i = index" class="row mb-2">
-                            <div class="col-md-3">
-                                <label for="productsku" class="mb-1 text-muted" style="font-weight: 500;">Option Name</label>
-                                <input type="text" class="form-control" id="productsku" [(ngModel)]="option.name" placeholder="Option {{ i + 1 }}">
-                            </div>
-                            <div class="col-md-3">
-                                <label for="productsku" class="mb-1 text-muted" style="font-weight: 500;">Option Price</label>
-                                <input type="text" class="form-control" id="productsku" [(ngModel)]="option.price" placeholder="Option {{ i + 1 }}">
-                            </div>
-                            <div class="col-md-3">
-                                <label for="productsku" class="mb-1 text-muted" style="font-weight: 500;">Option Discount Price</label>
-                                <input type="text" class="form-control" id="productsku" [(ngModel)]="option.discountedPrice" placeholder="Option {{ i + 1 }}">
-                            </div>
-                            <div class="col-md-3 d-flex align-items-end">
-                                <button class="btn btn-primary" (click)="removeRow(i)">Remove</button>
-                            </div>
-                        </div>
-                        <button class="btn btn-primary" (click)="addRow()">Add Option</button>
-                      </div>
-                      
-                </mat-tab>
-                <mat-tab label="Long Description">
-                    <div class="p-3">
-                        <div class="row mb-2">
-                            <div class="col-md-12">
-                                <div class="form-group">
-                                    <label for="Description" class="label-style text-muted" style="font-weight: 500;">Description</label>
-                                    <quill-editor id="Description" style="display: block;"
-                                        [styles]="{ 'width': '100%', 'height': '150px' }"></quill-editor>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                </mat-tab>
-                <mat-tab label="Related Products">
-                    <div class="p-3">
-                        <div class="col-md-12">
-                            <div class="form-group">
-                                <label for="patentCategory " class="mb-1 text-muted" style="font-weight: 500;">Related Products</label>
-                                <select class="form-control" id="patentCategory">
-                                    <option>1</option>
-                                    <option>2</option>
-                                    <option>3</option>
-                                    <option>4</option>
-                                    <option>5</option>
-                                </select>
-                            </div>
-                        </div>
-                    </div>
-
-                </mat-tab>
-                <mat-tab label="Industry/ Applications">
-                    <div class="p-3">
-                        <div class="col-md-12">
-                            <div class="form-group">
-                                <label for="patentCategory " class="mb-1 text-muted" style="font-weight: 500;">Industry/ Applications</label>
-                                <select class="form-control" id="patentCategory">
-                                    <option>1</option>
-                                    <option>2</option>
-                                    <option>3</option>
-                                    <option>4</option>
-                                    <option>5</option>
-                                </select>
-                            </div>
-                        </div>
-                    </div>
-                </mat-tab>
-            </mat-tab-group>
-        </div>
+                    </mat-tab>
+                </mat-tab-group>
+            </div>
+        </form>
     </div>
 </div>

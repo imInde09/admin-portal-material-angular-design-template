@@ -25,6 +25,7 @@ import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatSort, MatSortModule} from '@angular/material/sort';
 import {MatMenuModule} from '@angular/material/menu';
 import { QuillModule } from 'ngx-quill';
+import { AddNewsComponent } from './news/add-news/add-news.component';
 @NgModule({
   declarations: [
     DashboardComponent,
@@ -32,7 +33,8 @@ import { QuillModule } from 'ngx-quill';
     AdminComponent,
     OrdersComponent,
     QuotesComponent,
-    NewsComponent
+    NewsComponent,
+    AddNewsComponent
   ],
   imports: [
     CommonModule,RouterModule,ProductsModule,CustomerModule,
