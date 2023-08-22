@@ -16,6 +16,7 @@ import { CustomerPriceImportComponent } from './admin/customer/customer-price-im
 import { OrdersComponent } from './admin/orders/orders.component';
 import { QuotesComponent } from './admin/quotes/quotes.component';
 import { NewsComponent } from './admin/news/news.component';
+import { AddCategoryComponent } from './admin/products/category/add-category/add-category.component';
 const routes: Routes = [
   { path: '', redirectTo: '/signin', pathMatch: 'full' },
   { path: 'signin', component: SigninComponent },
@@ -24,10 +25,11 @@ const routes: Routes = [
       { path: 'dashboard', component: DashboardComponent },
       {
         path: 'products', component: ProductsComponent, children: [
-          { path: 'category', component: CategoryComponent },
+          { path: 'category', component: CategoryComponent},
           { path: 'applications', component: ApplicationsComponent },
           { path: 'pricing-import', component: PricingImportComponent },
           { path: 'lists', component: ListComponent },
+          {path: 'category/add-category', component: AddCategoryComponent},
           { path: '', redirectTo: '/admin/products/lists', pathMatch: 'full' }
         ]
       },

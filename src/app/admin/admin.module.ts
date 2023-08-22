@@ -24,6 +24,7 @@ import { MatFormField } from '@angular/material/form-field';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatSort, MatSortModule} from '@angular/material/sort';
 import {MatMenuModule} from '@angular/material/menu';
+import { QuillModule } from 'ngx-quill';
 @NgModule({
   declarations: [
     DashboardComponent,
@@ -36,7 +37,7 @@ import {MatMenuModule} from '@angular/material/menu';
   imports: [
     CommonModule,RouterModule,ProductsModule,CustomerModule,
     MatIconModule,MatButtonModule,MatToolbarModule,MatSidenavModule,NgIf,MatListModule,MatExpansionModule,
-    MatTableModule,MatPaginatorModule,MatFormFieldModule,MatSortModule,MatMenuModule
+    MatTableModule,MatPaginatorModule,MatFormFieldModule,MatSortModule,MatMenuModule,QuillModule
   ]
 })
 export class AdminModule { }
