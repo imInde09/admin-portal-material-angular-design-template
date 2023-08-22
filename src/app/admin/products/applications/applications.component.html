@@ -1,1 +1,125 @@
-<p>applications works!</p>
+<div class="container-fluid pt-3 card" style="border: none;">
+    <div class="row d-flex justify-content-between mb-2 px-3">
+        <div class="col-md-2">
+            <h4>Applications</h4>
+        </div>
+        <div class="col-md-3">
+            <div class="form-group">
+                <input type="text" class="form-control form-control-sm" (keyup)="applyFilter($event)" #input
+                    id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="search entry">
+            </div>
+        </div>
+    </div>
+    <div class="row d-flex justify-content-center card-body">
+        <div class="col-md-8">
+
+            <div class="mat-elevation-z8">
+                <table mat-table [dataSource]="dataSource" matSort>
+
+                    <!-- ID Column -->
+                    <!-- <ng-container matColumnDef="id">
+                            <th mat-header-cell *matHeaderCellDef mat-sort-header> ID </th>
+                            <td mat-cell *matCellDef="let row"> {{row.id}} </td>
+                        </ng-container> -->
+
+                    <!-- Progress Column -->
+                    <!-- <ng-container matColumnDef="progress">
+                      <th mat-header-cell *matHeaderCellDef mat-sort-header> Progress </th>
+                      <td mat-cell *matCellDef="let row"> {{row.progress}}% </td>
+                    </ng-container> -->
+
+                    <!-- Name Column -->
+                    <ng-container matColumnDef="name">
+                        <th mat-header-cell *matHeaderCellDef mat-sort-header> Name </th>
+                        <td mat-cell *matCellDef="let row"> {{row.name}} </td>
+                    </ng-container>
+
+                    <!-- Fruit Column -->
+                    <ng-container matColumnDef="slug">
+                        <th mat-header-cell *matHeaderCellDef mat-sort-header> Slug </th>
+                        <td mat-cell *matCellDef="let row"> {{row.slug}} </td>
+                    </ng-container>
+                    <!-- <ng-container matColumnDef="parent_category">
+                        <th mat-header-cell *matHeaderCellDef mat-sort-header> Parent Category </th>
+                        <td mat-cell *matCellDef="let row"> {{row.parent_category}} </td>
+                    </ng-container> -->
+                    <!-- <ng-container matColumnDef="date">
+                            <th mat-header-cell *matHeaderCellDef mat-sort-header> Date</th>
+                            <td mat-cell *matCellDef="let row"> {{row.date| date:'MM-dd-yyyy'}}</td>
+                        </ng-container> -->
+                    <ng-container matColumnDef="status">
+                        <th mat-header-cell *matHeaderCellDef mat-sort-header> Status </th>
+                        <td mat-cell *matCellDef="let row"><button class="btn btn-sm"
+                                style="color: white; cursor: default;"
+                                [ngStyle]="{'background-color': row.status === 'active' ? 'green' : 'red'}">{{row.status}}</button>
+                        </td>
+                    </ng-container>
+                    <ng-container matColumnDef="actions">
+                        <th mat-header-cell *matHeaderCellDef mat-sort-header> Actions </th>
+                        <td mat-cell *matCellDef="let row"><button class="btn btn-success btn-sm mr-1"
+                                (click)="onedit(row)"><mat-icon>mode_edit</mat-icon></button>&nbsp;&nbsp;
+                            <button class="btn btn-danger btn-sm "
+                                (click)="ondelete()"><mat-icon>delete</mat-icon></button>
+                        </td>
+                    </ng-container>
+                    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+                    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+
+                    <!-- Row shown when there is no matching data. -->
+                    <tr class="mat-row" *matNoDataRow>
+                        <td class="mat-cell" colspan="4">No data matching the filter "{{input.value}}"</td>
+                    </tr>
+                </table>
+
+                <mat-paginator [pageSizeOptions]="[ 10,15, 25, 100]" aria-label="Select page of users"></mat-paginator>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card p-4" style="border: none; background-color: whitesmoke;">
+                <h5 class="card-title px-2">Add Application</h5>
+                <div class="card-body">
+                    <form action="">
+                        <div class="row mb-3">
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <label for="name">Name</label>
+                                    <input type="text" class="form-control" id="name" placeholder="Enter Name">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row mb-3">
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <label for="slug">Slug</label>
+                                    <input type="text" class="form-control" id="slug" placeholder="Example Slug">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row mb-3">
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <label for="shortDescription">Short Description</label>
+                                    <input type="text" class="form-control" id="shortDescription" placeholder="Example input">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row mb-3">
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <label for="status">Status</label>
+                                    <select class="form-control" id="status">
+                                      <option selected>active</option>
+                                      <option>inactive</option>
+                                    </select>
+                                  </div>
+                            </div>
+                        </div>
+                        <div class="row mb-3">
+                            <div class="col-md-12"><button class="btn btn-primary">Submit</button></div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
