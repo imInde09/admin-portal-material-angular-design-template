@@ -1,3 +1,4 @@
+import { AddProductComponent } from './admin/products/list/add-product/add-product.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { SigninComponent } from './login/signin/signin.component';
@@ -30,6 +31,7 @@ const routes: Routes = [
           { path: 'pricing-import', component: PricingImportComponent },
           { path: 'lists', component: ListComponent },
           {path: 'category/add-category', component: AddCategoryComponent},
+          {path: 'lists/add-products',component: AddProductComponent},
           { path: '', redirectTo: '/admin/products/lists', pathMatch: 'full' }
         ]
       },
