@@ -5,6 +5,7 @@ import { AppComponent } from './app.component';
 import { SigninComponent } from './login/signin/signin.component';
 import { AdminModule } from './admin/admin.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { QuillModule } from 'ngx-quill';
 @NgModule({
   declarations: [
     AppComponent,
@@ -14,7 +15,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     BrowserModule,
     AppRoutingModule,
     AdminModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,QuillModule
   ],
   providers: [],
   bootstrap: [AppComponent]

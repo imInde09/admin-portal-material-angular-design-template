@@ -21,13 +21,14 @@ import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatSort, MatSortModule} from '@angular/material/sort';
 import {MatMenuModule} from '@angular/material/menu';
 import { AddCategoryComponent } from './category/add-category/add-category.component';
+import { QuillModule } from 'ngx-quill';
 @NgModule({
   declarations: [
     ListComponent,ProductsComponent, CategoryComponent, ApplicationsComponent, PricingImportComponent, AddCategoryComponent
   ],
   imports: [
     CommonModule,RouterModule,MatIconModule,MatButtonModule,MatToolbarModule,MatSidenavModule,NgIf,MatListModule,MatExpansionModule,
-    MatTableModule,MatPaginatorModule,MatFormFieldModule,MatSortModule,MatMenuModule
+    MatTableModule,MatPaginatorModule,MatFormFieldModule,MatSortModule,MatMenuModule,QuillModule
   ]
 })
 export class ProductsModule { }

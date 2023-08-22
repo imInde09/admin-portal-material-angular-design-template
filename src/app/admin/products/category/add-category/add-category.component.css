@@ -1,0 +1,7 @@
+.label-style {
+    display: block; /* Make the label a block-level element */
+    /* font-weight: bold; */
+    /* color: #333; */
+    margin-bottom: 5px; /* Add some bottom margin for spacing */
+  }
+  
