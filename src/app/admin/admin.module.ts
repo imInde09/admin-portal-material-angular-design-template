@@ -27,6 +27,7 @@ import {MatMenuModule} from '@angular/material/menu';
 import { QuillModule } from 'ngx-quill';
 import { AddNewsComponent } from './news/add-news/add-news.component';
 import { OrderDetailsComponent } from './orders/order-details/order-details.component';
+import { ProfileComponent } from './profile/profile.component';
 @NgModule({
   declarations: [
     DashboardComponent,
@@ -36,7 +37,8 @@ import { OrderDetailsComponent } from './orders/order-details/order-details.comp
     QuotesComponent,
     NewsComponent,
     AddNewsComponent,
-    OrderDetailsComponent
+    OrderDetailsComponent,
+    ProfileComponent
   ],
   imports: [
     CommonModule,RouterModule,ProductsModule,CustomerModule,
