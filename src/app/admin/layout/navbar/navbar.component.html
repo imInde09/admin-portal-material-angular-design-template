@@ -17,15 +17,15 @@
     <mat-icon>perm_identity</mat-icon>
   </button> -->
   <mat-menu #menu="matMenu">
-    <button mat-menu-item routerLink="products/lists">
+    <button mat-menu-item (click)="goProfile()">
       <mat-icon>person</mat-icon>
       <span>Profile</span>
     </button>
-    <button mat-menu-item>
+    <button mat-menu-item (click)="goProfile()">
       <mat-icon>password</mat-icon>
       <span>Change Passoword</span>
     </button>
-    <button mat-menu-item style="color: red;">
+    <button mat-menu-item style="color: red;" (click)="logout()">
       <mat-icon color="warn">logout</mat-icon>
       <span>Logout</span>
     </button>
