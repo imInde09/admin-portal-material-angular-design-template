@@ -19,6 +19,8 @@ import { QuotesComponent } from './admin/quotes/quotes.component';
 import { NewsComponent } from './admin/news/news.component';
 import { AddCategoryComponent } from './admin/products/category/add-category/add-category.component';
 import { AddNewsComponent } from './admin/news/add-news/add-news.component';
+import { OrderDetailsComponent } from './admin/orders/order-details/order-details.component';
+import { AddCustomerComponent } from './admin/customer/lists/add-customer/add-customer.component';
 const routes: Routes = [
   { path: '', redirectTo: '/signin', pathMatch: 'full' },
   { path: 'signin', component: SigninComponent },
@@ -39,6 +41,7 @@ const routes: Routes = [
       {
         path:  'customer', component: CustomerComponent, children:[
           {path: 'lists', component: ListsComponent},
+          {path: 'add', component: AddCustomerComponent},
           {path: 'customer-types', component: CustomerTypesComponent},
           {path: 'customer-import',component: CustomerImportComponent},
           {path: 'customer-price-import',component: CustomerPriceImportComponent},
@@ -46,6 +49,7 @@ const routes: Routes = [
         ]
       },
       {path:'orders',component: OrdersComponent},
+      {path: 'orders/orderdetails/:id',component: OrderDetailsComponent},
       {path:'quotes',component: QuotesComponent},
       {path:'news',component: NewsComponent},
       {path: 'news/add-news', component: AddNewsComponent},
