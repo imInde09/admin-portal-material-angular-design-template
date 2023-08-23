@@ -23,6 +23,8 @@ import {MatMenuModule} from '@angular/material/menu';
 import { QuillModule } from 'ngx-quill';
 import {MatTabsModule} from '@angular/material/tabs';
 import { FormsModule } from '@angular/forms';
+import { AddCustomerComponent } from './lists/add-customer/add-customer.component';
+import {MatDatepickerModule} from '@angular/material/datepicker';
 
 @NgModule({
   declarations: [
@@ -30,11 +32,12 @@ import { FormsModule } from '@angular/forms';
     ListsComponent,
     CustomerTypesComponent,
     CustomerImportComponent,
-    CustomerPriceImportComponent
+    CustomerPriceImportComponent,
+    AddCustomerComponent
   ],
   imports: [
     CommonModule,RouterModule,MatIconModule,MatButtonModule,MatToolbarModule,MatSidenavModule,NgIf,MatListModule,MatExpansionModule,
-    MatTableModule,MatPaginatorModule,MatFormFieldModule,MatSortModule,MatMenuModule,QuillModule,MatTabsModule,FormsModule
+    MatTableModule,MatPaginatorModule,MatFormFieldModule,MatSortModule,MatMenuModule,QuillModule,MatTabsModule,FormsModule,MatDatepickerModule
   ]
 })
 export class CustomerModule { }
