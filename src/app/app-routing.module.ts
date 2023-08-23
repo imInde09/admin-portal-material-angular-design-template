@@ -19,6 +19,7 @@ import { QuotesComponent } from './admin/quotes/quotes.component';
 import { NewsComponent } from './admin/news/news.component';
 import { AddCategoryComponent } from './admin/products/category/add-category/add-category.component';
 import { AddNewsComponent } from './admin/news/add-news/add-news.component';
+import { OrderDetailsComponent } from './admin/orders/order-details/order-details.component';
 const routes: Routes = [
   { path: '', redirectTo: '/signin', pathMatch: 'full' },
   { path: 'signin', component: SigninComponent },
@@ -46,6 +47,7 @@ const routes: Routes = [
         ]
       },
       {path:'orders',component: OrdersComponent},
+      {path: 'orders/orderdetails/:id',component: OrderDetailsComponent},
       {path:'quotes',component: QuotesComponent},
       {path:'news',component: NewsComponent},
       {path: 'news/add-news', component: AddNewsComponent},

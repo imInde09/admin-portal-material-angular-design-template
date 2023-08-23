@@ -26,6 +26,7 @@ import {MatSort, MatSortModule} from '@angular/material/sort';
 import {MatMenuModule} from '@angular/material/menu';
 import { QuillModule } from 'ngx-quill';
 import { AddNewsComponent } from './news/add-news/add-news.component';
+import { OrderDetailsComponent } from './orders/order-details/order-details.component';
 @NgModule({
   declarations: [
     DashboardComponent,
@@ -34,7 +35,8 @@ import { AddNewsComponent } from './news/add-news/add-news.component';
     OrdersComponent,
     QuotesComponent,
     NewsComponent,
-    AddNewsComponent
+    AddNewsComponent,
+    OrderDetailsComponent
   ],
   imports: [
     CommonModule,RouterModule,ProductsModule,CustomerModule,

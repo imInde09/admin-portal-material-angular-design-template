@@ -2,6 +2,7 @@ import {AfterViewInit, Component, ViewChild} from '@angular/core';
 import {MatPaginator, MatPaginatorModule} from '@angular/material/paginator';
 import { MatSort } from '@angular/material/sort';
 import {MatTableDataSource, MatTableModule} from '@angular/material/table';
+import { Router ,NavigationExtras} from '@angular/router';
 
 @Component({
   selector: 'app-orders',
@@ -13,7 +14,7 @@ export class OrdersComponent implements AfterViewInit {
   dataSource: MatTableDataSource<UserData>;
   @ViewChild(MatPaginator) paginator!: MatPaginator;
   @ViewChild(MatSort) sort!: MatSort;
-  constructor() {
+  constructor(private router: Router) {
     // Create 100 users
     const users = Array.from({length: 30}, (_, k) => createNewUser(k + 1));
 
@@ -25,6 +26,9 @@ export class OrdersComponent implements AfterViewInit {
     this.dataSource.sort = this.sort;
   }
   onedit(item:any){
+    this.router.navigate(['/admin/orders/orderdetails',item.id],{
+      state: {data: item}
+    });
     console.log(item.id+item.name+item.date+item.progress+item.item);
   }
   ondelete(){
