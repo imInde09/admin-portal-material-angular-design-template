@@ -14,8 +14,15 @@ export class OrderDetailsComponent implements OnInit{
 
   ngOnInit(): void {
     this.id = this.route.snapshot.paramMap.get('id');
-    this.billingAddress = this.billingService.getBillingAddress();
-    this.shippingAddress = this.billingService.getShippingAddress();
+    const index = parseInt(this.id, 10);
+    const addressData = this.billingService.getAddressByIndex(index-1);
+
+    if (addressData) {
+      this.billingAddress = addressData.billing;
+      this.shippingAddress = addressData.shipping;
+    } else {
+      console.log('Address not found.');
+    }
     console.log(this.id);
   }
   selectedInvoiceType: string = 'upload';
