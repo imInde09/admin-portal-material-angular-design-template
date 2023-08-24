@@ -1,2 +1,193 @@
-<p>order-details works!</p>
-<p style="background-color: red;">{{id}}</p>
+<div class="container-fluid pt-3 card" style="border: none;">
+    <div class="row d-flex justify-content-between mb-2 px-4">
+        <div class="col-md-4 d-flex align-items-center">
+            <h6>Order#ID</h6>
+        </div>
+        <div class="col-md-8 d-flex justify-content-end">
+            <form>
+                <div class="d-flex">
+                    <div class="col-3 form-group" style="margin-right: 15px;">
+                        <label for="status">Status</label>
+                        <select class="form-control" id="status">
+                            <option>Pending</option>
+                            <option>Processing</option>
+                            <option>Shipped</option>
+                            <option>Completed</option>
+                            <option>Cancelled</option>
+                        </select>
+                    </div>
+                    <div class="col-3 form-group" style="margin-right: 15px;">
+                        <label for="ponumber">PO Number</label>
+                        <input type="number" class="form-control" id="ponumber" placeholder="PO Number">
+                    </div>
+                    <div class="col-3 form-group" style="margin-right: 15px;">
+                        <label for="price">Price</label>
+                        <input type="number" class="form-control" id="price" placeholder="Price">
+                    </div>
+                    <div class="col-3 d-flex align-items-end">
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<div class="container-fluid pt-3 card mt-3" style="border: none;">
+    <div class="row d-flex justify-content-between mb-2 px-4">
+        <span class="p-2">Order #100000166 was placed on 01 April 2023 and is currently Pending.</span>
+    </div>
+    <div class="row d-flex justify-content-between mb-2 px-4 mt-3">
+        <div class="col-md-6">
+            <div class="row">
+              <h5>Billing Address</h5>
+            </div>
+            <div class="row">
+              <span>{{ billingAddress.name }}</span>
+            </div>
+            <div class="row">
+              <span>{{ billingAddress.street }}</span>
+            </div>
+            <div class="row">
+              <span>{{ billingAddress.city }} {{ billingAddress.postalCode }}</span>
+            </div>
+            <div class="row">
+              <span>{{ billingAddress.country }}</span>
+            </div>
+            <div class="row">
+              <span>{{ billingAddress.email }}</span>
+            </div>
+          </div>
+        <div class="col-md-6">
+            <div class="row">
+                <h5>Shipping Address</h5>
+            </div>
+            <div class="row">
+                <span>{{ shippingAddress.name }}</span>
+              </div>
+              <div class="row">
+                <span>{{ shippingAddress.street }}</span>
+              </div>
+              <div class="row">
+                <span>{{ shippingAddress.city }} {{ shippingAddress.postalCode }}</span>
+              </div>
+              <div class="row">
+                <span>{{ shippingAddress.country }}</span>
+              </div>
+              <div class="row">
+                <span>{{ shippingAddress.email }}</span>
+              </div>
+        </div>
+    </div>
+    <hr>
+    <div class="row d-flex justify-content-between mb-2 px-4">
+        <div class=" col-md-6 col-sm-12">
+            <div class="">
+                <h5>Sub Total : $0</h5>
+                <h5>Total : $0</h5>
+                <h5>Payment Type : Purchase Order</h5>
+                <h5>Purchase Order :
+                    <a href="https://www.cancard.com/storage/uploads/orders/ci1761975368511131.pdf" target="_blank"
+                        class="">Click Here</a>
+                </h5>
+            </div>
+        </div>
+        <div class="col-md-6 col-sm-12">
+            <form (ngSubmit)="submitForm()">
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="invoiceType" id="uploadRadio"
+                        [(ngModel)]="selectedInvoiceType" [value]="'upload'">
+                    <label class="form-check-label" for="uploadRadio" style="font-weight: 500;">
+                        Upload BV Invoice
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="invoiceType" id="generateRadio"
+                        [(ngModel)]="selectedInvoiceType" [value]="'generate'">
+                    <label class="form-check-label" for="generateRadio" style="font-weight: 500;">
+                        Generate Invoice Automatically
+                    </label>
+                </div>
+                <div class="col-md-8 mb-2" *ngIf="selectedInvoiceType === 'upload'">
+                    <div class="form-group">
+                        <label for="uploadFile" class="form-label">Upload File</label>
+                        <input class="form-control" type="file" id="uploadFile">
+                    </div>
+                </div>
+                <div class="col-md-6 mt-2">
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </div>
+            </form>
+
+        </div>
+    </div>
+</div>
+<div class="container-fluid pt-3 card mt-3" style="border: none;">
+    <div class="row d-flex justify-content-between mb-2 px-4">
+        <h4 class="" style="font-size: 18px; font-weight: 500;">Tracking Information</h4>
+        <span class="text-muted" style="font-size: 13px;">Fill tracking information</span>
+    </div>
+    <div class="row d-flex justify-content-between mb-2 px-4 mt-3">
+        <div class="row mb-3">
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label for="trackingNo" class="mb-1" style="font-weight: 500;">Tracking Number</label>
+                    <input type="number" class="form-control" id="trackingNo" placeholder="Enter Tracking Number">
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label for="trackingLink" class="mb-1" style="font-weight: 500;">Tracking Link</label>
+                    <input type="text" class="form-control" id="trackingLink"
+                        placeholder="Enter Tracking Link">
+                </div>
+            </div>
+        </div>
+        <div class="row mb-3">
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label for="trackingNotes" class="mb-1" style="font-weight: 500;">Tracking Notes</label>
+                    <input type="text" class="form-control" id="trackingNotes" placeholder="Enter Tracking Notes">
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label for="shipVia" class="mb-1" style="font-weight: 500;">Ship Via</label>
+                    <input type="text" class="form-control" id="shipVIa" placeholder="Ship Via">
+                </div>
+            </div>
+        </div>
+        <div class="row mb-3">
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label for="fob" class="mb-1" style="font-weight: 500;">F.O.B.</label>
+                    <input type="text" class="form-control" id="fob" placeholder="">
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label for="terms" class="mb-1" style="font-weight: 500;">Terms</label>
+                    <input type="text" class="form-control" id="terms" placeholder="Terms">
+                </div>
+            </div>
+        </div>
+        <div class="row mb-3">
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label for="salesrep" class="mb-1" style="font-weight: 500;">SLS REP</label>
+                    <input type="text" class="form-control" id="salesrep" placeholder="">
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label for="um" class="mb-1" style="font-weight: 500;">U/M</label>
+                    <input type="text" class="form-control" id="um" placeholder="">
+                </div>
+            </div>
+        </div>
+        <div class="row mb-3">
+            <div class="col-md-6">
+                <button class="btn btn-primary">Update Tracking Details</button>
+            </div>
+        </div>
+    </div>
+</div>

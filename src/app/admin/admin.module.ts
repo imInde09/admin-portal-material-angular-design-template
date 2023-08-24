@@ -28,6 +28,7 @@ import { QuillModule } from 'ngx-quill';
 import { AddNewsComponent } from './news/add-news/add-news.component';
 import { OrderDetailsComponent } from './orders/order-details/order-details.component';
 import { ProfileComponent } from './profile/profile.component';
+import { FormsModule } from '@angular/forms';
 @NgModule({
   declarations: [
     DashboardComponent,
@@ -43,7 +44,7 @@ import { ProfileComponent } from './profile/profile.component';
   imports: [
     CommonModule,RouterModule,ProductsModule,CustomerModule,
     MatIconModule,MatButtonModule,MatToolbarModule,MatSidenavModule,NgIf,MatListModule,MatExpansionModule,
-    MatTableModule,MatPaginatorModule,MatFormFieldModule,MatSortModule,MatMenuModule,QuillModule
+    MatTableModule,MatPaginatorModule,MatFormFieldModule,MatSortModule,MatMenuModule,QuillModule,FormsModule
   ]
 })
 export class AdminModule { }
