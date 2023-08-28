@@ -13,4 +13,21 @@ export class AddCategoryComponent {
     console.log("go category");
     this.router.navigate(['/admin/products/category']);
   }
+  categoryData = {
+    name: '',
+    slug: '',
+    order: '',
+    parentCategory: '1',
+    status: 'active',
+    industryapplications: 'active',
+    shortDescription: '',
+    description: '',
+    image: '',
+    bannerImage: '',
+  };
+  addCategory(){
+    console.log("add category");
+    console.log(this.categoryData);
+    this.router.navigate(['/admin/products/category']);
+  }
 }

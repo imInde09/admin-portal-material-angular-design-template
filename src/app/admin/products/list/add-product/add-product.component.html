@@ -8,22 +8,22 @@
         </div>
     </div>
     <div class="row">
-        <form action="">
-            <div class="col-md-12">
-                <mat-tab-group mat-stretch-tabs="false" mat-align-tabs="start">
-                    <mat-tab label="General">
+        <div class="col-md-12">
+            <mat-tab-group mat-stretch-tabs="false" mat-align-tabs="start">
+                <mat-tab label="General">
+                    <form #generalform="ngForm" (ngSubmit)="general()">
                         <div class="p-3">
                             <div class="row mb-2">
                                 <div class="col-md-6">
                                     <div class="form-group">
                                         <label for="name" class="mb-1 text-muted" style="font-weight: 500;">Name</label>
-                                        <input type="text" class="form-control" id="name" placeholder="Enter Name">
+                                        <input type="text" class="form-control" id="name" placeholder="Enter Name" name="name" [(ngModel)]="productDetails.general.name">
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-group">
                                         <label for="slug" class="mb-1 text-muted" style="font-weight: 500;">Slug</label>
-                                        <input type="text" class="form-control" id="slug" placeholder="Example Slug">
+                                        <input type="text" class="form-control" id="slug" placeholder="Example Slug" name="slug" [(ngModel)]="productDetails.general.slug">
                                     </div>
                                 </div>
                             </div>
@@ -31,26 +31,30 @@
                                 <div class="col-md-3">
                                     <div class="form-group">
                                         <label for="price" class="mb-1 text-muted" style="font-weight: 500;">Price</label>
-                                        <input type="text" class="form-control" id="price" placeholder="Enter Price">
+                                        <input type="number" class="form-control" id="price" placeholder="Enter Price" name="price" [(ngModel)]="productDetails.general.price">
                                     </div>
                                 </div>
                                 <div class="col-md-3">
                                     <div class="form-group">
-                                        <label for="DiscPrice" class="mb-1 text-muted" style="font-weight: 500;">Discounted Price</label>
-                                        <input type="text" class="form-control" id="DiscPrice" placeholder="Example Discounted Price">
+                                        <label for="DiscPrice" class="mb-1 text-muted" style="font-weight: 500;">Discounted
+                                            Price</label>
+                                        <input type="number" class="form-control" id="DiscPrice"
+                                            placeholder="Example Discounted Price" name="discountedPrice [(ngModel)]="productDetails.general.discountedPrice>
                                     </div>
                                 </div>
                                 <div class="col-md-3">
                                     <div class="form-group">
-                                        <label for="productsku" class="mb-1 text-muted" style="font-weight: 500;">Product Sku</label>
-                                        <input type="text" class="form-control" id="productsku" placeholder="Enter Product Sku">
+                                        <label for="productsku" class="mb-1 text-muted" style="font-weight: 500;">Product
+                                            Sku</label>
+                                        <input type="text" class="form-control" id="productsku"
+                                            placeholder="Enter Product Sku" name="productsku" [(ngModel)]="productDetails.general.productsku">
                                     </div>
                                 </div>
                                 <div class="col-md-3">
                                     <div class="form-group">
                                         <label for="vendor" class="mb-1 text-muted" style="font-weight: 500;">Vendor</label>
-                                        <select class="form-control" id="vendor">
-                                            <option>1</option>
+                                        <select class="form-control" id="vendor" name="vendor" [(ngModel)]="productDetails.general.vendor">
+                                            <option>cancard</option>
                                             <option>2</option>
                                             <option>3</option>
                                             <option>4</option>
@@ -62,8 +66,9 @@
                             <div class="row mb-2">
                                 <div class="col-md-4">
                                     <div class="form-group">
-                                        <label for="patentCategory" class="mb-1 text-muted" style="font-weight: 500;">Category</label>
-                                        <select class="form-control" id="patentCategory">
+                                        <label for="patentCategory" class="mb-1 text-muted"
+                                            style="font-weight: 500;">Category</label>
+                                        <select class="form-control" id="patentCategory" name="category" [(ngModel)]="productDetails.general.category">
                                             <option>1</option>
                                             <option>2</option>
                                             <option>3</option>
@@ -75,100 +80,118 @@
                                 <div class="col-md-3">
                                     <div class="form-group">
                                         <label for="status" class="mb-1 text-muted" style="font-weight: 500;">Status</label>
-                                        <select class="form-control" id="status">
+                                        <select class="form-control" id="status" name="status" [(ngModel)]="productDetails.general.status">
                                             <option selected>active</option>
                                             <option>inactive</option>
                                         </select>
                                     </div>
                                 </div>
                                 <div class="col-md-3" style="    display: flex;
-                                flex-direction: column;
-                                justify-content: center;">
+                                    flex-direction: column;
+                                    justify-content: center;">
                                     <span class="mb-1 text-muted" style="font-weight: 500;">Include Top Parts</span>
-                                    <div class="form-group form-check form-switch d-flex align-items-center">
-                                        
-                                        <input class="form-check-input" style="margin-right: 5px;" type="checkbox" role="switch" id="flexSwitchCheckDefault">
-                                        <label class="form-check-label" for="flexSwitchCheckDefault">Do you want to display in top list?</label>
-                                      </div>
+                                    <div class="form-group form-check form-switch d-flex align-items-center" >
+    
+                                        <input class="form-check-input" style="margin-right: 5px;" type="checkbox"
+                                            role="switch" id="flexSwitchCheckDefault" name="topparts" [(ngModel)]="productDetails.general.topparts">
+                                        <label class="form-check-label" for="flexSwitchCheckDefault">Do you want to display
+                                            in top list?</label>
+                                    </div>
                                 </div>
                                 <div class="col-md-2">
                                     <div class="form-group">
-                                        <label for="topProductOrder" class="mb-1 text-muted" style="font-weight: 500;">Top Product Order</label>
-                                        <input type="text" class="form-control" id="topProductOrder" placeholder="Enter Top Product Order">
+                                        <label for="topProductOrder" class="mb-1 text-muted" style="font-weight: 500;">Top
+                                            Product Order</label>
+                                        <input type="text" class="form-control" id="topProductOrder"
+                                            placeholder="Enter Top Product Order" name="topproductorder" [(ngModel)]="productDetails.general.topproductorder">
                                     </div>
                                 </div>
                             </div>
                             <div class="row mb-2">
                                 <div class="col-md-12">
                                     <div class="form-group">
-                                        <label for="Description" class="label-style text-muted mb-1" style="font-weight: 500;">Description</label>
+                                        <label for="Description" class="label-style text-muted mb-1"
+                                            style="font-weight: 500;">Description</label>
                                         <quill-editor id="Description" style="display: block;"
-                                            [styles]="{ 'width': '100%', 'height': '150px' }"></quill-editor>
+                                            [styles]="{ 'width': '100%', 'height': '150px' }" name="description" [(ngModel)]="productDetails.general.description"></quill-editor>
                                     </div>
                                 </div>
                             </div>
-                            
+    
                             <div class="row mb-2">
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        
-                                        <label for="formFile" class="form-label mb-1 text-muted" style="font-weight: 500;">Image</label>
-                                        <input class="form-control" type="file" id="image">
+    
+                                        <label for="formFile" class="form-label mb-1 text-muted"
+                                            style="font-weight: 500;">Image</label>
+                                        <input class="form-control" type="file" id="image" name="image" [(ngModel)]="productDetails.general.image">
                                     </div>
                                 </div>
                             </div>
                             <div class="row mb-2">
                                 <div class="col-md-2">
-                                    <button class="btn btn-primary">Submit</button>
+                                    <button class="btn btn-primary" type="submit">Submit</button>
                                 </div>
                             </div>
                         </div>
-    
-                    </mat-tab>
-                    <mat-tab label="Options/ Variations">
+                    </form>
+
+                </mat-tab>
+                <mat-tab label="Options/ Variations">
+                    <form #optionForm="ngForm" (ngSubmit)="option()">
                         <div class="p-3">
-                            
                             <div *ngFor="let option of options; let i = index" class="row mb-2">
                                 <div class="col-md-3">
-                                    <label for="productsku" class="mb-1 text-muted" style="font-weight: 500;">Option Name</label>
-                                    <input type="text" class="form-control" id="productsku" [(ngModel)]="option.name" placeholder="Option {{ i + 1 }}">
+                                    <label class="mb-1 text-muted" style="font-weight: 500;">Option Name</label>
+                                    <input type="text" class="form-control" [(ngModel)]="option.name" [ngModelOptions]="{standalone: true}" placeholder="Option {{ i + 1 }}">
                                 </div>
                                 <div class="col-md-3">
-                                    <label for="productsku" class="mb-1 text-muted" style="font-weight: 500;">Option Price</label>
-                                    <input type="text" class="form-control" id="productsku" [(ngModel)]="option.price" placeholder="Option {{ i + 1 }}">
+                                    <label class="mb-1 text-muted" style="font-weight: 500;">Option Price</label>
+                                    <input type="number" class="form-control" [(ngModel)]="option.price" [ngModelOptions]="{standalone: true}" placeholder="Option {{ i + 1 }}">
                                 </div>
                                 <div class="col-md-3">
-                                    <label for="productsku" class="mb-1 text-muted" style="font-weight: 500;">Option Discount Price</label>
-                                    <input type="text" class="form-control" id="productsku" [(ngModel)]="option.discountedPrice" placeholder="Option {{ i + 1 }}">
+                                    <label class="mb-1 text-muted" style="font-weight: 500;">Option Discount Price</label>
+                                    <input type="number" class="form-control" [(ngModel)]="option.discountedPrice" [ngModelOptions]="{standalone: true}" placeholder="Option {{ i + 1 }}">
                                 </div>
                                 <div class="col-md-3 d-flex align-items-end">
-                                    <button class="btn btn-primary" (click)="removeRow(i)">Remove</button>
+                                    <a class="btn btn-primary" (click)="removeRow(i)">Remove</a>
                                 </div>
                             </div>
-                            <button class="btn btn-primary" (click)="addRow()">Add Option</button>
-                          </div>
-                          
-                    </mat-tab>
-                    <mat-tab label="Long Description">
+                            <a class="btn btn-primary" (click)="addRow()">Add Option</a>
+                            <button class="btn btn-success" style="margin-left: 20px;" type="submit">Submit</button>
+                        </div>
+                    </form>
+                    
+
+                </mat-tab>
+                <mat-tab label="Long Description">
+                    <form #longdescriptionform="ngForm" (submit)="longDescription()">
                         <div class="p-3">
                             <div class="row mb-2">
                                 <div class="col-md-12">
                                     <div class="form-group">
-                                        <label for="Description" class="label-style text-muted" style="font-weight: 500;">Description</label>
+                                        <label for="Description" class="label-style text-muted"
+                                            style="font-weight: 500;">Description</label>
                                         <quill-editor id="Description" style="display: block;"
-                                            [styles]="{ 'width': '100%', 'height': '150px' }"></quill-editor>
+                                            [styles]="{ 'width': '100%', 'height': '150px' }" name="description" [(ngModel)]="productDetails.description"></quill-editor>
                                     </div>
                                 </div>
+                                <div class="col-md-12">
+                                    <button class="btn btn-primary" style="margin-top: 10px;" type="submit">Submit</button>
+                                </div>
                             </div>
                         </div>
-    
-                    </mat-tab>
-                    <mat-tab label="Related Products">
+                    </form>
+
+                </mat-tab>
+                <mat-tab label="Related Products">
+                    <form #relatedProductsForm="ngForm" (submit)="relatedProduts()">
                         <div class="p-3">
                             <div class="col-md-12">
                                 <div class="form-group">
-                                    <label for="patentCategory " class="mb-1 text-muted" style="font-weight: 500;">Related Products</label>
-                                    <select class="form-control" id="patentCategory">
+                                    <label for="patentCategory " class="mb-1 text-muted" style="font-weight: 500;">Related
+                                        Products</label>
+                                    <select class="form-control" id="patentCategory" name="relatedProduts" [(ngModel)]="productDetails.products">
                                         <option>1</option>
                                         <option>2</option>
                                         <option>3</option>
@@ -177,15 +200,21 @@
                                     </select>
                                 </div>
                             </div>
+                            <div class="col-md-12">
+                                <button class="btn btn-primary" style="margin-top: 10px;" type="submit">Submit</button>
+                            </div>
                         </div>
-    
-                    </mat-tab>
-                    <mat-tab label="Industry/ Applications">
+                    </form>
+
+                </mat-tab>
+                <mat-tab label="Industry/ Applications">
+                    <form #industryform="ngForm" (click)="industry()">
                         <div class="p-3">
                             <div class="col-md-12">
                                 <div class="form-group">
-                                    <label for="patentCategory " class="mb-1 text-muted" style="font-weight: 500;">Industry/ Applications</label>
-                                    <select class="form-control" id="patentCategory">
+                                    <label for="patentCategory " class="mb-1 text-muted" style="font-weight: 500;">Industry/
+                                        Applications</label>
+                                    <select class="form-control" id="patentCategory" name="industry" [(ngModel)]="productDetails.industry">
                                         <option>1</option>
                                         <option>2</option>
                                         <option>3</option>
@@ -194,10 +223,13 @@
                                     </select>
                                 </div>
                             </div>
+                            <div class="col-md-12">
+                                <button class="btn btn-primary" style="margin-top: 10px;" type="submit">Submit</button>
+                            </div>
                         </div>
-                    </mat-tab>
-                </mat-tab-group>
-            </div>
-        </form>
+                    </form>
+                </mat-tab>
+            </mat-tab-group>
+        </div>
     </div>
 </div>

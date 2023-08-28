@@ -6,5 +6,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./customer-price-import.component.css']
 })
 export class CustomerPriceImportComponent {
-
+  customerpriceimport = {
+    customerstatus: '',
+    customerpricefile: ''
+  }
+  customerPriceImport(){
+    console.log(this.customerpriceimport);
+  }
 }

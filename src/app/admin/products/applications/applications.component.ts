@@ -42,7 +42,7 @@ export class ApplicationsComponent implements AfterViewInit{
     name:'',
     slug:'',
     shortDescription:'',
-    status: '',
+    status: 'active',
   }
   applicationsubmit(){
     console.log(this.formData);

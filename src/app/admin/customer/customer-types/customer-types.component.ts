@@ -39,6 +39,14 @@ export class CustomerTypesComponent implements AfterViewInit{
       this.dataSource.paginator.firstPage();
     }
   }
+  customerty={
+    name: '',
+    details: ''
+  }
+  customerType(){
+    console.log("Form Submitted")
+    console.log(this.customerty);
+  }
 }
 export interface UserData {
   id: string;

@@ -9,7 +9,7 @@
 
     </div>
     <div class="card-body">
-        <form action="">
+        <form #addnews = "ngForm" (ngSubmit)="addNews()">
             <div class="p-3">
                 <div class="row mb-2">
                     <div class="col-md-12">
@@ -20,13 +20,13 @@
                     <div class="col-md-6">
                         <div class="form-group">
                             <label for="name" class="mb-1 text-muted" style="font-weight: 500;">Title</label>
-                            <input type="text" class="form-control" id="name" placeholder="Enter Name">
+                            <input type="text" class="form-control" id="name" placeholder="Enter Name" name="title" [(ngModel)]="formData.title">
                         </div>
                     </div>
                     <div class="col-md-6">
                         <div class="form-group">
                             <label for="slug" class="mb-1 text-muted" style="font-weight: 500;">Slug</label>
-                            <input type="text" class="form-control" id="slug" placeholder="Example Slug">
+                            <input type="text" class="form-control" id="slug" placeholder="Example Slug" name="slug" [(ngModel)]="formData.slug">
                         </div>
                     </div>
                 </div>
@@ -35,7 +35,7 @@
                         <div class="form-group">
                             <label for="Description" class="label-style text-muted mb-1" style="font-weight: 500;">Description</label>
                             <quill-editor id="Description" style="display: block;"
-                                [styles]="{ 'width': '100%', 'height': '150px' }"></quill-editor>
+                                [styles]="{ 'width': '100%', 'height': '150px' }" name="description" [(ngModel)]="formData.description"></quill-editor>
                         </div>
                     </div>
                 </div>
@@ -45,13 +45,13 @@
                         <div class="form-group">
                             
                             <label for="formFile" class="form-label mb-1 text-muted" style="font-weight: 500;">Image</label>
-                            <input class="form-control" type="file" id="image">
+                            <input class="form-control" type="file" id="image" name="image" [(ngModel)]="formData.image">
                         </div>
                     </div>
                     <div class="col-md-6">
                         <div class="form-group">
                             <label for="status" class="mb-1 text-muted" style="font-weight: 500;">Status</label>
-                            <select class="form-control" id="status">
+                            <select class="form-control" id="status" name="status" [(ngModel)]="formData.status">
                                 <option selected>active</option>
                                 <option>inactive</option>
                             </select>

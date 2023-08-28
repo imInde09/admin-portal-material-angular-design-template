@@ -6,5 +6,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./customer-import.component.css']
 })
 export class CustomerImportComponent {
-
+  customerfile: any;
+  customerImport(){
+    console.log(this.customerfile);
+  }
 }
