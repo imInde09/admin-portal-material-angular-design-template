@@ -6,5 +6,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./pricing-import.component.css']
 })
 export class PricingImportComponent {
-
+  pricing_file: any;
+  pricingImport(){
+    console.log(this.pricing_file);
+  }
 }

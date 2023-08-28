@@ -8,13 +8,13 @@
         <div class="col-md-12">
             <div class="card" style="border: none; background-color: white;">
                 <div class="card-body">
-                    <form action="">
+                    <form #customerprice="ngForm" (ngSubmit)="customerPriceImport()">
                         <div class="row mb-3">
                             <h6 class="card-title" style="margin-bottom: 15px;">Import</h6>
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <label for="status" class="mb-1 text-muted" style="font-weight: 500;">Customer</label>
-                                    <select class="form-control" id="status">
+                                    <select class="form-control" id="status" name="customerStatus" [(ngModel)]="customerpriceimport.customerstatus">
                                         <option>active</option>
                                         <option>inactive</option>
                                     </select>
@@ -24,7 +24,7 @@
                                 
                                 <div class="form-group">
                                     <label for="uploadFile" class="mb-1 text-muted" style="font-weight: 500;">Upload File</label>
-                                    <input class="form-control" type="file" id="uploadFile">
+                                    <input class="form-control" type="file" id="uploadFile" name="uploadFile" [(ngModel)]="customerpriceimport.customerpricefile">
                                 </div>
                             </div>
                         </div>

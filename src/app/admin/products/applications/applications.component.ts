@@ -1,7 +1,7 @@
 import {AfterViewInit, Component, ViewChild } from '@angular/core';
 import {MatPaginator, MatPaginatorModule} from '@angular/material/paginator';
 import { MatSort } from '@angular/material/sort';
-import {MatTableDataSource, MatTableModule} from '@angular/material/table';
+import {MatTable, MatTableDataSource, MatTableModule} from '@angular/material/table';
 @Component({
   selector: 'app-applications',
   templateUrl: './applications.component.html',
@@ -37,6 +37,16 @@ export class ApplicationsComponent implements AfterViewInit{
     if (this.dataSource.paginator) {
       this.dataSource.paginator.firstPage();
     }
+  }
+  formData={
+    name:'',
+    slug:'',
+    shortDescription:'',
+    status: 'active',
+  }
+  applicationsubmit(){
+    console.log(this.formData);
+    console.log("submit");
   }
 }
 export interface UserData {

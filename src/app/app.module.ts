@@ -6,6 +6,7 @@ import { SigninComponent } from './login/signin/signin.component';
 import { AdminModule } from './admin/admin.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { QuillModule } from 'ngx-quill';
+import { FormsModule, ReactiveFormsModule, Validators } from '@angular/forms';
 @NgModule({
   declarations: [
     AppComponent,
@@ -15,7 +16,7 @@ import { QuillModule } from 'ngx-quill';
     BrowserModule,
     AppRoutingModule,
     AdminModule,
-    BrowserAnimationsModule,QuillModule
+    BrowserAnimationsModule,QuillModule,FormsModule,ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

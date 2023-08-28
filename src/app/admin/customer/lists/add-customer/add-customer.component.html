@@ -8,230 +8,233 @@
         </div>
     </div>
     <div class="row card-body">
-        <div class="col-md-12">
-            <mat-accordion class="example-headers-align">
-                <mat-expansion-panel [expanded]="step === 0" (opened)="setStep(0)" hideToggle>
-                    <mat-expansion-panel-header class="d-flex justify-content-between">
-                        <mat-icon>account_circle</mat-icon>
-                        <mat-panel-title style="font-size: 16px; font-weight: 600;">
-                            Basic Information
-                        </mat-panel-title>
-                        <mat-panel-description style="display: flex; justify-content: end;">
-                            Fill all Personal Information Below
-                        </mat-panel-description>
-                    </mat-expansion-panel-header>
-                    <div class="row mb-3">
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                <label for="email" class="mb-1" style="font-weight: 500;">Email</label>
-                                <input type="email" class="form-control" id="email" placeholder="Enter Email">
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                <label for="customerNo" class="mb-1" style="font-weight: 500;">Customer
-                                    No</label>
-                                <input type="number" class="form-control" id="customerNo"
-                                    placeholder="Enter Customer No">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row mb-3">
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                <label for="name" class="mb-1" style="font-weight: 500;">Name</label>
-                                <input type="text" class="form-control" id="name" placeholder="Enter Name">
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                <label for="vendor" class="mb-1" style="font-weight: 500;">Customer Type</label>
-                                <select class="form-control" id="vendor">
-                                    <option>None</option>
-                                    <option>General</option>
-                                </select>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row mb-3">
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                <label for="phoneNo" class="mb-1" style="font-weight: 500;">Phone</label>
-                                <input type="number" class="form-control" id="phoneNo" placeholder="Enter Phone Number">
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                <label for="discount" class="mb-1" style="font-weight: 500;">Discount</label>
-                                <input type="number" class="form-control" id="discount"
-                                    placeholder="Discount">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row mb-3">
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                <label for="companyName" class="mb-1" style="font-weight: 500;">Company Name</label>
-                                <input type="text" class="form-control" id="companyName" placeholder="Enter Company Name">
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                <label for="vendor" class="mb-1" style="font-weight: 500;">Status</label>
-                                <select class="form-control" id="vendor">
-                                    <option>active</option>
-                                    <option selected>inactive</option>
-                                </select>
-                            </div>
-                        </div>
-                    </div>
-                    <!--               
-                  <mat-form-field>
-                    <mat-label>First name</mat-label>
-                    <input matInput>
-                  </mat-form-field>
-              
-                  <mat-form-field>
-                    <mat-label>Age</mat-label>
-                    <input matInput type="number" min="1">
-                  </mat-form-field> -->
-                    <mat-action-row>
-                        <button mat-button style="color: green;">Save Details</button>
-                        <button mat-button color="primary" (click)="nextStep()">Next</button>
-                    </mat-action-row>
-                </mat-expansion-panel>
+        <form #addcustomer="ngForm" (ngSubmit)="addCustomer()">
 
-                <mat-expansion-panel [expanded]="step === 1" (opened)="setStep(1)" hideToggle>
-                    <mat-expansion-panel-header>
-                        <mat-icon>map</mat-icon>
-                        <mat-panel-title style="font-size: 16px; font-weight: 600;">
-                            Address Information
-                        </mat-panel-title>
-                        <mat-panel-description style="display: flex; justify-content: end;">
-                            Fill the Address Information below
-                        </mat-panel-description>
-                    </mat-expansion-panel-header>
-                    <div class="row mb-3">
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                <label for="billingadd1" class="mb-1" style="font-weight: 500;">Billing Address 1</label>
-                                <input type="text" class="form-control" id="billingadd1" placeholder="Enter Billing Address 1">
+            <div class="col-md-12">
+                <mat-accordion class="example-headers-align">
+                    <mat-expansion-panel [expanded]="step === 0" (opened)="setStep(0)" hideToggle>
+                        <mat-expansion-panel-header class="d-flex justify-content-between">
+                            <mat-icon>account_circle</mat-icon>
+                            <mat-panel-title style="font-size: 16px; font-weight: 600;">
+                                Basic Information
+                            </mat-panel-title>
+                            <mat-panel-description style="display: flex; justify-content: end;">
+                                Fill all Personal Information Below
+                            </mat-panel-description>
+                        </mat-expansion-panel-header>
+                        <div class="row mb-3">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="email" class="mb-1" style="font-weight: 500;">Email</label>
+                                    <input type="email" class="form-control" id="email" placeholder="Enter Email" name="Email" [(ngModel)]="customerDetails.personalInfo.email">
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="customerNo" class="mb-1" style="font-weight: 500;">Customer
+                                        No</label>
+                                    <input type="number" class="form-control" id="customerNo"
+                                        placeholder="Enter Customer No" name="CustomerNo" [(ngModel)]="customerDetails.personalInfo.customerInfo">
+                                </div>
                             </div>
                         </div>
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                <label for="shippingadd1" class="mb-1" style="font-weight: 500;">Shipping Address 1</label>
-                                <input type="text" class="form-control" id="shippingadd1" placeholder="Enter Shipping Address 1">
+                        <div class="row mb-3">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="name" class="mb-1" style="font-weight: 500;">Name</label>
+                                    <input type="text" class="form-control" id="name" placeholder="Enter Name" name="name" [(ngModel)]="customerDetails.personalInfo.name">
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="customerType" class="mb-1" style="font-weight: 500;">Customer Type</label>
+                                    <select class="form-control" id="customerType" name="customerType" [(ngModel)]="customerDetails.personalInfo.customerType">
+                                        <option>None</option>
+                                        <option>General</option>
+                                    </select>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="row mb-3">
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                <label for="billingadd2" class="mb-1" style="font-weight: 500;">Billing Address 2</label>
-                                <input type="text" class="form-control" id="billingadd2" placeholder="Enter Billing Address 2">
+                        <div class="row mb-3">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="phoneNo" class="mb-1" style="font-weight: 500;">Phone</label>
+                                    <input type="number" class="form-control" id="phoneNo" placeholder="Enter Phone Number" name="phoneNo" [(ngModel)]="customerDetails.personalInfo.phoneNo">
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="discount" class="mb-1" style="font-weight: 500;">Discount</label>
+                                    <input type="number" class="form-control" id="discount"
+                                        placeholder="Discount" name="discount" [(ngModel)]="customerDetails.personalInfo.discount">
+                                </div>
                             </div>
                         </div>
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                <label for="shippingadd2" class="mb-1" style="font-weight: 500;">Shipping Address 2</label>
-                                <input type="text" class="form-control" id="shippingadd2" placeholder="Enter Shipping Address 2">
+                        <div class="row mb-3">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="companyName" class="mb-1" style="font-weight: 500;">Company Name</label>
+                                    <input type="text" class="form-control" id="companyName" placeholder="Enter Company Name" name="companyName" [(ngModel)]="customerDetails.personalInfo.companyName">
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="customerStatus" class="mb-1" style="font-weight: 500;">Status</label>
+                                    <select class="form-control" id="customerStatus" name="customerStatus" [(ngModel)]="customerDetails.personalInfo.customerStatus">
+                                        <option>active</option>
+                                        <option selected>inactive</option>
+                                    </select>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="row mb-3">
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                <label for="billingCity" class="mb-1" style="font-weight: 500;">City</label>
-                                <input type="text" class="form-control" id="billingCity" placeholder="Enter City">
+                        <!--               
+                      <mat-form-field>
+                        <mat-label>First name</mat-label>
+                        <input matInput>
+                      </mat-form-field>
+                  
+                      <mat-form-field>
+                        <mat-label>Age</mat-label>
+                        <input matInput type="number" min="1">
+                      </mat-form-field> -->
+                        <mat-action-row>
+                            <!-- <button mat-button style="color: green;">Save Details</button> -->
+                            <a mat-button color="primary" (click)="nextStep()">Next</a>
+                        </mat-action-row>
+                    </mat-expansion-panel>
+    
+                    <mat-expansion-panel [expanded]="step === 1" (opened)="setStep(1)" hideToggle>
+                        <mat-expansion-panel-header>
+                            <mat-icon>map</mat-icon>
+                            <mat-panel-title style="font-size: 16px; font-weight: 600;">
+                                Address Information
+                            </mat-panel-title>
+                            <mat-panel-description style="display: flex; justify-content: end;">
+                                Fill the Address Information below
+                            </mat-panel-description>
+                        </mat-expansion-panel-header>
+                        <div class="row mb-3">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="billingadd1" class="mb-1" style="font-weight: 500;">Billing Address 1</label>
+                                    <input type="text" class="form-control" id="billingadd1" placeholder="Enter Billing Address 1" name="billingAdd1" [(ngModel)]="customerDetails.addressInfo.billingAdd1">
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="shippingadd1" class="mb-1" style="font-weight: 500;">Shipping Address 1</label>
+                                    <input type="text" class="form-control" id="shippingadd1" placeholder="Enter Shipping Address 1" name="shippingAdd1" [(ngModel)]="customerDetails.addressInfo.shippingAdd1">
+                                </div>
                             </div>
                         </div>
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                <label for="shippingCity" class="mb-1" style="font-weight: 500;">City</label>
-                                <input type="text" class="form-control" id="shippingCity" placeholder="Enter City">
+                        <div class="row mb-3">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="billingadd2" class="mb-1" style="font-weight: 500;">Billing Address 2</label>
+                                    <input type="text" class="form-control" id="billingadd2" placeholder="Enter Billing Address 2" name="billingAdd2" [(ngModel)]="customerDetails.addressInfo.billingAdd2">
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="shippingadd2" class="mb-1" style="font-weight: 500;">Shipping Address 2</label>
+                                    <input type="text" class="form-control" id="shippingadd2" placeholder="Enter Shipping Address 2" name="shippingAdd2" [(ngModel)]="customerDetails.addressInfo.shippingAdd2">
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="row mb-3">
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                <label for="billingState" class="mb-1" style="font-weight: 500;">State</label>
-                                <input type="text" class="form-control" id="billingState" placeholder="Enter State">
+                        <div class="row mb-3">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="billingCity" class="mb-1" style="font-weight: 500;">City</label>
+                                    <input type="text" class="form-control" id="billingCity" placeholder="Enter City" name="billingCity" [(ngModel)]="customerDetails.addressInfo.billingCity">
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="shippingCity" class="mb-1" style="font-weight: 500;">City</label>
+                                    <input type="text" class="form-control" id="shippingCity" placeholder="Enter City" name="shippingCity" [(ngModel)]="customerDetails.addressInfo.shippingCity">
+                                </div>
                             </div>
                         </div>
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                <label for="shippingState" class="mb-1" style="font-weight: 500;">State</label>
-                                <input type="text" class="form-control" id="shippingState" placeholder="Enter State">
+                        <div class="row mb-3">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="billingState" class="mb-1" style="font-weight: 500;">State</label>
+                                    <input type="text" class="form-control" id="billingState" placeholder="Enter State" name="billingState" [(ngModel)]="customerDetails.addressInfo.billingState">
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="shippingState" class="mb-1" style="font-weight: 500;">State</label>
+                                    <input type="text" class="form-control" id="shippingState" placeholder="Enter State" name="shippingCity" [(ngModel)]="customerDetails.addressInfo.shippingCity">
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="row mb-3">
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                <label for="billingZipCode" class="mb-1" style="font-weight: 500;">ZipCode</label>
-                                <input type="text" class="form-control" id="billingZipCode" placeholder="Enter ZipCode">
+                        <div class="row mb-3">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="billingZipCode" class="mb-1" style="font-weight: 500;">ZipCode</label>
+                                    <input type="number" class="form-control" id="billingZipCode" placeholder="Enter ZipCode" name="billingZip" [(ngModel)]="customerDetails.addressInfo.billingZip">
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="shippingZipCode" class="mb-1" style="font-weight: 500;">ZipCode</label>
+                                    <input type="number" class="form-control" id="shippingZipCode" placeholder="Enter ZipCode" name="shippingZip" [(ngModel)]="customerDetails.addressInfo.shippingZip">
+                                </div>
                             </div>
                         </div>
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                <label for="shippingZipCode" class="mb-1" style="font-weight: 500;">ZipCode</label>
-                                <input type="text" class="form-control" id="shippingZipCode" placeholder="Enter ZipCode">
+                        <!-- <mat-form-field>
+                        <mat-label>Country</mat-label>
+                        <input matInput>
+                      </mat-form-field> -->
+    
+                        <mat-action-row>
+                            <a mat-button color="warn" (click)="prevStep()">Previous</a>
+                            <!-- <button mat-button style="color: green;">Save Details</button> -->
+                            <a mat-button color="primary" (click)="nextStep()">Next</a>
+                        </mat-action-row>
+                    </mat-expansion-panel>
+    
+                    <mat-expansion-panel [expanded]="step === 2" (opened)="setStep(2)" hideToggle>
+                        <mat-expansion-panel-header>
+                            <mat-icon>password</mat-icon>
+                            <mat-panel-title style="font-size: 16px; font-weight: 600;">
+                                Add Password
+                            </mat-panel-title>
+                            <mat-panel-description style="display: flex; justify-content: end;">
+                                Add Password Information Below
+                            </mat-panel-description>
+                        </mat-expansion-panel-header>
+                        <div class="row mb-3">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="password" class="mb-1" style="font-weight: 500;">Add Password</label>
+                                    <input type="password" class="form-control" id="password" placeholder="Enter Password" name="password" [(ngModel)]="customerDetails.passwordInfo.password">
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <!-- <mat-form-field>
-                    <mat-label>Country</mat-label>
-                    <input matInput>
-                  </mat-form-field> -->
-
-                    <mat-action-row>
-                        <button mat-button color="warn" (click)="prevStep()">Previous</button>
-                        <button mat-button style="color: green;">Save Details</button>
-                        <button mat-button color="primary" (click)="nextStep()">Next</button>
-                    </mat-action-row>
-                </mat-expansion-panel>
-
-                <mat-expansion-panel [expanded]="step === 2" (opened)="setStep(2)" hideToggle>
-                    <mat-expansion-panel-header>
-                        <mat-icon>password</mat-icon>
-                        <mat-panel-title style="font-size: 16px; font-weight: 600;">
-                            Add Password
-                        </mat-panel-title>
-                        <mat-panel-description style="display: flex; justify-content: end;">
-                            Add Password Information Below
-                        </mat-panel-description>
-                    </mat-expansion-panel-header>
-                    <div class="row mb-3">
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                <label for="password" class="mb-1" style="font-weight: 500;">Add Password</label>
-                                <input type="password" class="form-control" id="password" placeholder="Enter Password">
+                        <div class="row mb-3">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="confirmpassword" class="mb-1" style="font-weight: 500;">Confirm Password</label>
+                                    <input type="password" class="form-control" id="confirmpassword" placeholder="Enter Confirm Password" name="confirmPassword" [(ngModel)]="customerDetails.passwordInfo.confirmPassword">
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="row mb-3">
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                <label for="confirmpassword" class="mb-1" style="font-weight: 500;">Confirm Password</label>
-                                <input type="password" class="form-control" id="confirmpassword" placeholder="Enter Confirm Password">
-                            </div>
-                        </div>
-                    </div>
-                    <!-- <mat-form-field>
-                    <mat-label>Date</mat-label>
-                    <input matInput [matDatepicker]="picker" (focus)="picker.open()" readonly>
-                  </mat-form-field>
-                  <mat-datepicker #picker></mat-datepicker> -->
-
-                    <mat-action-row>
-                        <button mat-button color="warn" (click)="prevStep()">Previous</button>
-                        <button mat-button color="primary" (click)="nextStep()">Save Details</button>
-                    </mat-action-row>
-                </mat-expansion-panel>
-
-            </mat-accordion>
-        </div>
+                        <!-- <mat-form-field>
+                        <mat-label>Date</mat-label>
+                        <input matInput [matDatepicker]="picker" (focus)="picker.open()" readonly>
+                      </mat-form-field>
+                      <mat-datepicker #picker></mat-datepicker> -->
+    
+                        <mat-action-row>
+                            <a mat-button color="warn" (click)="prevStep()">Previous</a>
+                            <button mat-button color="primary" type="submit">Save Details</button>
+                        </mat-action-row>
+                    </mat-expansion-panel>
+    
+                </mat-accordion>
+            </div>
+        </form>
     </div>
 </div>

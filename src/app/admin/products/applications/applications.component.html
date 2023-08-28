@@ -78,12 +78,12 @@
             <div class="card p-4" style="border: none; background-color: whitesmoke;">
                 <h5 class="card-title px-2">Add Application</h5>
                 <div class="card-body">
-                    <form action="">
+                    <form #applicationform = "ngForm" (ngSubmit)="applicationsubmit()">
                         <div class="row mb-3">
                             <div class="col-md-12">
                                 <div class="form-group">
                                     <label for="name">Name</label>
-                                    <input type="text" class="form-control" id="name" placeholder="Enter Name">
+                                    <input type="text" class="form-control" id="name" placeholder="Enter Name" name="name" [(ngModel)]="formData.name">
                                 </div>
                             </div>
                         </div>
@@ -91,7 +91,7 @@
                             <div class="col-md-12">
                                 <div class="form-group">
                                     <label for="slug">Slug</label>
-                                    <input type="text" class="form-control" id="slug" placeholder="Example Slug">
+                                    <input type="text" class="form-control" id="slug" placeholder="Example Slug" name="slug" [(ngModel)]="formData.slug">
                                 </div>
                             </div>
                         </div>
@@ -99,7 +99,7 @@
                             <div class="col-md-12">
                                 <div class="form-group">
                                     <label for="shortDescription">Short Description</label>
-                                    <input type="text" class="form-control" id="shortDescription" placeholder="Example input">
+                                    <input type="text" class="form-control" id="shortDescription" placeholder="Example input" name="shortDescription" [(ngModel)]="formData.shortDescription">
                                 </div>
                             </div>
                         </div>
@@ -107,7 +107,7 @@
                             <div class="col-md-12">
                                 <div class="form-group">
                                     <label for="status">Status</label>
-                                    <select class="form-control" id="status">
+                                    <select class="form-control" id="status" name="status" [(ngModel)]="formData.status">
                                       <option selected>active</option>
                                       <option>inactive</option>
                                     </select>
