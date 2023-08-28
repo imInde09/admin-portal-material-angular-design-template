@@ -29,6 +29,7 @@ import { AddNewsComponent } from './news/add-news/add-news.component';
 import { OrderDetailsComponent } from './orders/order-details/order-details.component';
 import { ProfileComponent } from './profile/profile.component';
 import { FormsModule } from '@angular/forms';
+import { QuoteDetailsComponent } from './quotes/quote-details/quote-details.component';
 @NgModule({
   declarations: [
     DashboardComponent,
@@ -39,7 +40,8 @@ import { FormsModule } from '@angular/forms';
     NewsComponent,
     AddNewsComponent,
     OrderDetailsComponent,
-    ProfileComponent
+    ProfileComponent,
+    QuoteDetailsComponent
   ],
   imports: [
     CommonModule,RouterModule,ProductsModule,CustomerModule,

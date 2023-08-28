@@ -2,6 +2,7 @@ import {AfterViewInit, Component, ViewChild} from '@angular/core';
 import {MatPaginator, MatPaginatorModule} from '@angular/material/paginator';
 import { MatSort } from '@angular/material/sort';
 import {MatTableDataSource, MatTableModule} from '@angular/material/table';
+import { ActivatedRoute, Router } from '@angular/router';
 @Component({
   selector: 'app-quotes',
   templateUrl: './quotes.component.html',
@@ -13,7 +14,7 @@ export class QuotesComponent implements AfterViewInit  {
   dataSource: MatTableDataSource<UserData>;
   @ViewChild(MatPaginator) paginator!: MatPaginator;
   @ViewChild(MatSort) sort!: MatSort;
-  constructor() {
+  constructor(private route: ActivatedRoute,private router: Router) {
     // Create 100 users
     const users = Array.from({length: 30}, (_, k) => createNewUser(k + 1));
 
@@ -26,6 +27,14 @@ export class QuotesComponent implements AfterViewInit  {
   }
   onedit(item:any){
     console.log(item.id+item.name+item.date+item.progress+item.item);
+    const queryParams = {
+      id: item.id,
+      name: item.name,
+      date: item.date,
+      progress: item.progress,
+      item: item.item
+  };
+    this.router.navigate(['/admin/quotes/quotedetails']);
   }
   ondelete(){
     console.log("delete");
