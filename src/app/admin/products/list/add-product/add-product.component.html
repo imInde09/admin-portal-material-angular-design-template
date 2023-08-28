@@ -165,7 +165,7 @@
 
                 </mat-tab>
                 <mat-tab label="Long Description">
-                    <form #longdescriptionform="ngForm" (submit)="longDescription()">
+                    <form #longdescriptionform="ngForm" (ngSubmit)="longDescription()">
                         <div class="p-3">
                             <div class="row mb-2">
                                 <div class="col-md-12">
@@ -185,7 +185,7 @@
 
                 </mat-tab>
                 <mat-tab label="Related Products">
-                    <form #relatedProductsForm="ngForm" (submit)="relatedProduts()">
+                    <form #relatedProductsForm="ngForm" (ngsubmit)="relatedProduts()">
                         <div class="p-3">
                             <div class="col-md-12">
                                 <div class="form-group">
