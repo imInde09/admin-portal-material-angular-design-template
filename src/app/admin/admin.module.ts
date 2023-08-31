@@ -30,6 +30,7 @@ import { OrderDetailsComponent } from './orders/order-details/order-details.comp
 import { ProfileComponent } from './profile/profile.component';
 import { FormsModule } from '@angular/forms';
 import { QuoteDetailsComponent } from './quotes/quote-details/quote-details.component';
+import { VendorComponent } from './vendor/vendor.component';
 @NgModule({
   declarations: [
     DashboardComponent,
@@ -41,7 +42,8 @@ import { QuoteDetailsComponent } from './quotes/quote-details/quote-details.comp
     AddNewsComponent,
     OrderDetailsComponent,
     ProfileComponent,
-    QuoteDetailsComponent
+    QuoteDetailsComponent,
+    VendorComponent
   ],
   imports: [
     CommonModule,RouterModule,ProductsModule,CustomerModule,
