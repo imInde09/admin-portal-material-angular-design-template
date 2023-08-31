@@ -23,6 +23,7 @@ import { OrderDetailsComponent } from './admin/orders/order-details/order-detail
 import { AddCustomerComponent } from './admin/customer/lists/add-customer/add-customer.component';
 import { ProfileComponent } from './admin/profile/profile.component';
 import { QuoteDetailsComponent } from './admin/quotes/quote-details/quote-details.component';
+import { VendorComponent } from './admin/vendor/vendor.component';
 const routes: Routes = [
   { path: '', redirectTo: '/signin', pathMatch: 'full' },
   { path: 'signin', component: SigninComponent },
@@ -57,6 +58,7 @@ const routes: Routes = [
       {path:'news',component: NewsComponent},
       {path: 'news/add-news', component: AddNewsComponent},
       {path: 'profile', component: ProfileComponent},
+      {path: 'vendor',component: VendorComponent},
       { path: '', redirectTo: '/admin/dashboard', pathMatch: 'full' }
     ]
   }
