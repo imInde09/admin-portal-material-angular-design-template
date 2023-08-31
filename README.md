@@ -1,27 +1,6 @@
 # CancardAdminPortal
 
-//This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.2.0.
-Angular CLI: 16.2.0
-Node: 20.5.0 (Unsupported)
-Package Manager: npm 9.3.0
-OS: win32 x64
-
-Angular: 16.2.1
-... animations, cdk, common, compiler, compiler-cli, core, forms
-... material, platform-browser, platform-browser-dynamic, router
-
-Package                         Version
----------------------------------------------------------
-@angular-devkit/architect       0.1602.0
-@angular-devkit/build-angular   16.2.0
-@angular-devkit/core            16.2.0
-@angular-devkit/schematics      16.2.0
-@angular/cli                    16.2.0
-@schematics/angular             16.2.0
-rxjs                            7.8.1
-typescript                      4.9.5
-zone.js                         0.13.1
-
+//This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.0.
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
