@@ -10,81 +10,81 @@ export class BillingServiceService {
     {
       billing: {
         label: 'Billing Address',
-        name: 'Gautam Modak',
-        street: '37 Ontario St',
+        name: 'jon doe',
+        street: '123 Main St',
         city: 'St Catharines',
         postalCode: 'L2N 1S8',
-        country: 'Canada',
-        email: 'gmodak@cancard.com'
+        country: 'USA',
+        email: 'jondoe@jon.com'
       },
       shipping: {
         label: 'Shipping Address',
-        name: 'John Doe',
-        street: '123 Shipping St',
-        city: 'Shipping City',
-        postalCode: '12345',
+        name: 'jon doe',
+        street: '123 Main St',
+        city: 'St Catharines',
+        postalCode: 'L2N 1S8',
         country: 'USA',
-        email: 'john@example.com'
+        email: 'jondoe@jon.com'
       }
     },
     {
       billing: {
         label: 'Billing Address',
-        name: 'Nitesh Mathur',
-        street: '37 Ontario St',
+        name: 'jon doe',
+        street: '123 Main St',
         city: 'St Catharines',
         postalCode: 'L2N 1S8',
-        country: 'Canada',
-        email: 'nmathur@cancard.com'
+        country: 'USA',
+        email: 'jondoe@jon.com'
       },
       shipping: {
         label: 'Shipping Address',
-        name: 'John Doe',
-        street: '123 Shipping St',
-        city: 'Shipping City',
-        postalCode: '12345',
+        name: 'jon doe',
+        street: '123 Main St',
+        city: 'St Catharines',
+        postalCode: 'L2N 1S8',
         country: 'USA',
-        email: 'john@example.com'
+        email: 'jondoe@jon.com'
       }
     },
     {
       billing: {
         label: 'Billing Address',
-        name: 'Nitesh Mathur',
-        street: '37 Ontario St',
+        name: 'jon doe',
+        street: '123 Main St',
         city: 'St Catharines',
         postalCode: 'L2N 1S8',
-        country: 'Canada',
-        email: 'nmathur@cancard.com'
+        country: 'USA',
+        email: 'jondoe@jon.com'
       },
       shipping: {
         label: 'Shipping Address',
-        name: 'John Doe',
-        street: '123 Shipping St',
-        city: 'Shipping City',
-        postalCode: '12345',
+        name: 'jon doe',
+        street: '123 Main St',
+        city: 'St Catharines',
+        postalCode: 'L2N 1S8',
         country: 'USA',
-        email: 'john@example.com'
+        email: 'jondoe@jon.com'
       }
     },
     {
       billing: {
         label: 'Billing Address',
-        name: 'Nitesh Mathur',
-        street: '37 Ontario St',
+        name: 'jon doe',
+        street: '123 Main St',
         city: 'St Catharines',
         postalCode: 'L2N 1S8',
-        country: 'Canada',
-        email: 'nmathur@cancard.com'
+        country: 'USA',
+        email: 'jondoe@jon.com'
       },
       shipping: {
         label: 'Shipping Address',
-        name: 'John Deere',
-        street: '123 Shipping St',
-        city: 'Shipping City',
-        postalCode: '12345',
+        name: 'jon doe',
+        street: '123 Main St',
+        city: 'St Catharines',
+        postalCode: 'L2N 1S8',
         country: 'USA',
-        email: 'john@example.com'
+        email: 'jondoe@jon.com'
       }
     },
     // Add more address entries as needed

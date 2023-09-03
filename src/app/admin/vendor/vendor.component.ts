@@ -56,10 +56,10 @@ export interface UserData {
 
 /** Constants used to fill up our data base. */
 const DETAILS: string[] = [
-  'Default Vendor: Cancard',
+  'Default Vendor',
 ];
 const NAMES: string[] = [
-  'Cancard',
+  'vendorname',
 ];
 /** Builds and returns a new User. */
 function createNewUser(id: number): UserData {

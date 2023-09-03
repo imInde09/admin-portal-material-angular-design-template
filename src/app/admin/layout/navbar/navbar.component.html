@@ -1,5 +1,5 @@
 <mat-toolbar color="grey">
-  <a class="navbar-brand mx-3" routerLink="dashboard"><img class="img-fluid" width="140" src="assets/NEW CANCARD Logo .png" alt=""></a>
+  <a class="navbar-brand mx-3" routerLink="dashboard"><img class="img-fluid" width="140" src="assets/logo.png" alt=""></a>
   <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon"
     (click)="drawer.toggle()">
     <mat-icon>menu</mat-icon>
@@ -66,15 +66,17 @@
     </mat-nav-list>
   </mat-sidenav>
   <mat-sidenav-content>
-    <div style="height: 91vh;">
-      <div class="container-fluid">
+    <div style="height: 91vh; background-color: white;">
+      <div class="container-fluid" >
         <div class="row">
           <div class="col-md-12 mt-1">
             <router-outlet></router-outlet>
           </div>
         </div>
+        <app-footer class="p-2"></app-footer>
       </div>
     </div>
+   
   </mat-sidenav-content>
 
   <!-- <div class="example-sidenav-content">

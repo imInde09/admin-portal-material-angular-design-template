@@ -53,17 +53,13 @@ export interface UserData {
 
 /** Constants used to fill up our data base. */
 const DETAILS: string[] = [
-  'Sonitor and Cancard enter into strategic distribution agreement for Canada.',
-  'PDC Healthcare announces preferred distribution agreement with Cancard, Inc for Canada.',
-  'cancard-inc-now-a-certified-service-agent-for-nbs-technologies-for-canada',
+  'test1','test2','test3'
 ];
 const STATUS: string[] = [
   'active','inactive'
 ];
 const NAMES: string[] = [
-  'Sonitor and Cancard enter into strategic distribution agreement for Canada.',
-  'PDC Healthcare announces preferred distribution agreement with Cancard, Inc for Canada.',
-  'Cancard, Inc now a Certified Service Agent for NBS Technologies for Canada.',
+  'test1','test2','test3'
 ];
 /** Builds and returns a new User. */
 function createNewUser(id: number): UserData {

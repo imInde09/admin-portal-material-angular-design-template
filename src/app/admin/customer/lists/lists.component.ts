@@ -57,9 +57,9 @@ export interface UserData {
 
 /** Constants used to fill up our data base. */
 const ITEMS: string[] = [
-  'Galore Creek Mining Corporation',
-  'Norgren New Matics',
-  'FIO Automottive Canada'
+  'lorem ipsum',
+  'dolor sit',
+  'amet lorem'
 ];
 const STATUS: string[] = [
   'active','inactive'
@@ -74,13 +74,7 @@ const NAMES: string[] = [
   'Charlotte',
 ];
 const EMAILS: string[] = [
-  'Maia@cancard.com',
-  'Asher@cancard.com',
-  'Olivia@cancard.com',
-  'Atticus@cancard.com',
-  'Amelia@cancard.com',
-  'Jack@cancard.com',
-  'Charlotte@cancard.com'
+  'test@test.com','test1@test6.com'
 ];
 const PHONES: number[] = [
   1234567890,

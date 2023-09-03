@@ -80,7 +80,7 @@ export class DashboardComponent {
     },
   };
   public pieChartData: ChartData<'pie', number[], string | string[]> = {
-    labels: [['Download', 'Sales'], ['In', 'Store', 'Sales'], 'Mail Sales'],
+    labels: [['Download'], ['Instore'], 'Mail Sales'],
     datasets: [
       {
         data: [300, 500, 100],
