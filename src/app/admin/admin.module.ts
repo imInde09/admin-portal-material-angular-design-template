@@ -31,6 +31,7 @@ import { ProfileComponent } from './profile/profile.component';
 import { FormsModule } from '@angular/forms';
 import { QuoteDetailsComponent } from './quotes/quote-details/quote-details.component';
 import { VendorComponent } from './vendor/vendor.component';
+import { NgChartsModule, NgChartsConfiguration } from 'ng2-charts';
 @NgModule({
   declarations: [
     DashboardComponent,
@@ -48,7 +49,10 @@ import { VendorComponent } from './vendor/vendor.component';
   imports: [
     CommonModule,RouterModule,ProductsModule,CustomerModule,
     MatIconModule,MatButtonModule,MatToolbarModule,MatSidenavModule,NgIf,MatListModule,MatExpansionModule,
-    MatTableModule,MatPaginatorModule,MatFormFieldModule,MatSortModule,MatMenuModule,QuillModule,FormsModule
+    MatTableModule,MatPaginatorModule,MatFormFieldModule,MatSortModule,MatMenuModule,QuillModule,FormsModule,NgChartsModule
+  ],
+  providers: [
+    { provide: NgChartsConfiguration, useValue: { generateColors: false }}
   ]
 })
 export class AdminModule { }
