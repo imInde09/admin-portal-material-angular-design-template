@@ -32,6 +32,7 @@ import { FormsModule } from '@angular/forms';
 import { QuoteDetailsComponent } from './quotes/quote-details/quote-details.component';
 import { VendorComponent } from './vendor/vendor.component';
 import { NgChartsModule, NgChartsConfiguration } from 'ng2-charts';
+import { FooterComponent } from './layout/footer/footer.component';
 @NgModule({
   declarations: [
     DashboardComponent,
@@ -44,7 +45,8 @@ import { NgChartsModule, NgChartsConfiguration } from 'ng2-charts';
     OrderDetailsComponent,
     ProfileComponent,
     QuoteDetailsComponent,
-    VendorComponent
+    VendorComponent,
+    FooterComponent
   ],
   imports: [
     CommonModule,RouterModule,ProductsModule,CustomerModule,

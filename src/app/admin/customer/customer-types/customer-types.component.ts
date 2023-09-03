@@ -56,14 +56,14 @@ export interface UserData {
 
 /** Constants used to fill up our data base. */
 const DETAILS: string[] = [
-  'Individual',
-  'Corporate',
-  'Purchasing Groups',
+  'test1',
+  'test2',
+  'test3',
 ];
 const NAMES: string[] = [
-  'Individual',
-  'Corporate',
-  'Purchasing Groups',
+  'test1',
+  'test2',
+  'test3',
 ];
 /** Builds and returns a new User. */
 function createNewUser(id: number): UserData {

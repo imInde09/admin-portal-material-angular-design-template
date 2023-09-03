@@ -59,10 +59,7 @@ export interface UserData {
 
 /** Constants used to fill up our data base. */
 const ITEMS: string[] = [
-  'Matica P402i Desktop Inkjet Passport Printer',
-  'C330 Automatic Metal Tag Embosser',
-  'Avalo Series Tech-Ready Medication Carts M-Series Tech-Ready Medication Carts',
-  'C330 Automatic Metal Tag Embosser'
+  'test1','test2','test3'
 ];
 const NAMES: string[] = [
   'Maia',

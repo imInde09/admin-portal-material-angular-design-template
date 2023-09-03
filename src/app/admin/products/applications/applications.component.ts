@@ -58,10 +58,7 @@ export interface UserData {
 
 /** Constants used to fill up our data base. */
 const SLUG: string[] = [
-  'laser-wristbands',
-  'thermal-wristbands',
-  'sheild-wristbands',
-  'industrial-label-printers','mobile-printers','scanner'
+  'test1','test2','test3'
 ];
 const STATUS: string[] = [
   'active','inactive'

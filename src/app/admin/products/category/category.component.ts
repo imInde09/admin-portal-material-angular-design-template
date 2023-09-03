@@ -54,13 +54,10 @@ export interface UserData {
 
 /** Constants used to fill up our data base. */
 const DETAILS: string[] = [
-  'laser-wristbands',
-  'thermal-wristbands',
-  'sheild-wristbands',
-  'industrial-label-printers','mobile-printers','scanner'
+  'test1','test2','test3'
 ];
 const CATERGORY: string[] = [
-  'IDENTIFICATION CARD PRINTERS','NONE','LABEL PRINTER','PATIENT ID WRISTBANDS'
+  'test1','test2','test3','test4'
 ];
 const STATUS: string[] = [
   'active','inactive'

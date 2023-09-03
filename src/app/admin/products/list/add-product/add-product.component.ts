@@ -28,7 +28,7 @@ export class AddProductComponent {
       price: null,
       discountedPrice: null,
       productsku: '',
-      vendor: 'cancard',
+      vendor: 'default',
       category: '1',
       status: 'active',
       topparts: true,
