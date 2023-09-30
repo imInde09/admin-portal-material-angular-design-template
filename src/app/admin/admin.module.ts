@@ -24,7 +24,6 @@ import { MatFormField } from '@angular/material/form-field';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatSort, MatSortModule} from '@angular/material/sort';
 import {MatMenuModule} from '@angular/material/menu';
-import { QuillModule } from 'ngx-quill';
 import { AddNewsComponent } from './news/add-news/add-news.component';
 import { OrderDetailsComponent } from './orders/order-details/order-details.component';
 import { ProfileComponent } from './profile/profile.component';
@@ -51,7 +50,7 @@ import { FooterComponent } from './layout/footer/footer.component';
   imports: [
     CommonModule,RouterModule,ProductsModule,CustomerModule,
     MatIconModule,MatButtonModule,MatToolbarModule,MatSidenavModule,NgIf,MatListModule,MatExpansionModule,
-    MatTableModule,MatPaginatorModule,MatFormFieldModule,MatSortModule,MatMenuModule,QuillModule,FormsModule,NgChartsModule
+    MatTableModule,MatPaginatorModule,MatFormFieldModule,MatSortModule,MatMenuModule,FormsModule,NgChartsModule
   ],
   providers: [
     { provide: NgChartsConfiguration, useValue: { generateColors: false }}

@@ -91,7 +91,7 @@
                                     justify-content: center;">
                                     <span class="mb-1 text-muted" style="font-weight: 500;">Include Top Parts</span>
                                     <div class="form-group form-check form-switch d-flex align-items-center" >
-    
+
                                         <input class="form-check-input" style="margin-right: 5px;" type="checkbox"
                                             role="switch" id="flexSwitchCheckDefault" name="topparts" [(ngModel)]="productDetails.general.topparts">
                                         <label class="form-check-label" for="flexSwitchCheckDefault">Do you want to display
@@ -112,16 +112,15 @@
                                     <div class="form-group">
                                         <label for="Description" class="label-style text-muted mb-1"
                                             style="font-weight: 500;">Description</label>
-                                        <quill-editor id="Description" style="display: block;"
-                                            [styles]="{ 'width': '100%', 'height': '150px' }" name="description" [(ngModel)]="productDetails.general.description"></quill-editor>
+                                        <textarea name="" id="" cols="30" rows="3" [(ngModel)]="productDetails.general.description"></textarea>
                                     </div>
                                 </div>
                             </div>
-    
+
                             <div class="row mb-2">
                                 <div class="col-md-6">
                                     <div class="form-group">
-    
+
                                         <label for="formFile" class="form-label mb-1 text-muted"
                                             style="font-weight: 500;">Image</label>
                                         <input class="form-control" type="file" id="image" name="image" [(ngModel)]="productDetails.general.image">
@@ -161,7 +160,7 @@
                             <button class="btn btn-success" style="margin-left: 20px;" type="submit">Submit</button>
                         </div>
                     </form>
-                    
+
 
                 </mat-tab>
                 <mat-tab label="Long Description">
@@ -172,8 +171,7 @@
                                     <div class="form-group">
                                         <label for="Description" class="label-style text-muted"
                                             style="font-weight: 500;">Description</label>
-                                        <quill-editor id="Description" style="display: block;"
-                                            [styles]="{ 'width': '100%', 'height': '150px' }" name="description" [(ngModel)]="productDetails.description"></quill-editor>
+                                        <textarea class="form-control" id="Description" rows="3" name="description" [(ngModel)]="productDetails.description"></textarea>
                                     </div>
                                 </div>
                                 <div class="col-md-12">
