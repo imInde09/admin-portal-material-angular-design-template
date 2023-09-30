@@ -5,7 +5,6 @@ import { AppComponent } from './app.component';
 import { SigninComponent } from './login/signin/signin.component';
 import { AdminModule } from './admin/admin.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { QuillModule } from 'ngx-quill';
 import { FormsModule, ReactiveFormsModule, Validators } from '@angular/forms';
 import { NgChartsModule } from 'ng2-charts';
 @NgModule({
@@ -17,7 +16,7 @@ import { NgChartsModule } from 'ng2-charts';
     BrowserModule,
     AppRoutingModule,
     AdminModule,
-    BrowserAnimationsModule,QuillModule,FormsModule,ReactiveFormsModule,NgChartsModule
+    BrowserAnimationsModule,FormsModule,ReactiveFormsModule,NgChartsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

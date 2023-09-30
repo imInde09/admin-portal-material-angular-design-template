@@ -20,7 +20,6 @@ import { MatFormField } from '@angular/material/form-field';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatSort, MatSortModule} from '@angular/material/sort';
 import {MatMenuModule} from '@angular/material/menu';
-import { QuillModule } from 'ngx-quill';
 import {MatTabsModule} from '@angular/material/tabs';
 import { FormsModule } from '@angular/forms';
 import { AddCustomerComponent } from './lists/add-customer/add-customer.component';
@@ -37,7 +36,7 @@ import {MatDatepickerModule} from '@angular/material/datepicker';
   ],
   imports: [
     CommonModule,RouterModule,MatIconModule,MatButtonModule,MatToolbarModule,MatSidenavModule,NgIf,MatListModule,MatExpansionModule,
-    MatTableModule,MatPaginatorModule,MatFormFieldModule,MatSortModule,MatMenuModule,QuillModule,MatTabsModule,FormsModule,MatDatepickerModule
+    MatTableModule,MatPaginatorModule,MatFormFieldModule,MatSortModule,MatMenuModule,MatTabsModule,FormsModule,MatDatepickerModule
   ]
 })
 export class CustomerModule { }

@@ -34,16 +34,15 @@
                     <div class="col-md-12">
                         <div class="form-group">
                             <label for="Description" class="label-style text-muted mb-1" style="font-weight: 500;">Description</label>
-                            <quill-editor id="Description" style="display: block;"
-                                [styles]="{ 'width': '100%', 'height': '150px' }" name="description" [(ngModel)]="formData.description"></quill-editor>
+                            <textarea class="form-control" id="Description" rows="3" name="description" [(ngModel)]="formData.description"></textarea>
                         </div>
                     </div>
                 </div>
-                
+
                 <div class="row mb-2">
                     <div class="col-md-6">
                         <div class="form-group">
-                            
+
                             <label for="formFile" class="form-label mb-1 text-muted" style="font-weight: 500;">Image</label>
                             <input class="form-control" type="file" id="image" name="image" [(ngModel)]="formData.image">
                         </div>
